@@ -1,0 +1,153 @@
+@charset "UTF-8";
+
+/*----------------------------------------
+  |                INDEX                 |
+  |         -M = (Mobile-First)          |
+  |      -1 = (First Media Quiery)       |
+  |     -2 = (Second Media Quiery)       |
+  |      -3 = (Third Media Quiery)       |
+  |     -4 = (Fourth Media Quiery)       |
+  |     -5 = (Fifth Media Quiery)        |
+  ----------------------------------------*/
+/*--------------------------------------------
+           BASE STYLES (MOBILE-FIRST)
+--------------------------------------------*/  
+* {
+    box-sizing: border-box;
+}
+
+/***** BASIC TEXT STYLES-M ******/
+@font-face {
+    font-family: 'HackneyPersonalUseOnly';
+    src: url('../font/HackneyPersonalUseOnly.eot');
+    src: url('../font/HackneyPersonalUseOnly.eot?#iefix') format('embedded-opentype'),
+         url('../font/HackneyPersonalUseOnly.svg#HackneyPersonalUseOnly') format('svg'),
+         url('../font/HackneyPersonalUseOnly.ttf') format('truetype'),
+         url('../font/HackneyPersonalUseOnly.woff') format('woff'),
+         url('../font/HackneyPersonalUseOnly.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: fallback;
+    }
+  
+ p {
+    font-family: "Montserrat subheading", "Verdana", "sans-serif";
+    line-height: 30px;
+    color: #000;
+    flex: 1 1 auto;
+    }
+
+h1, h2{
+    font-family: "HackneyPersonalUseOnly", "Bebas Neue", "Impact", "sans-serif";
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 1.5rem;
+    }
+
+.home-image {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1 1 auto;
+    border-radius: 10px 10px 0 0;
+    filter: grayscale(100%); 
+    opacity: 0.8;
+    object-fit: cover;
+    max-width: 100%;
+    width: 300px;
+    height: 500px;
+    margin-top: 20%;
+}
+
+/***** Mobile Navigation-M *****/
+.wrapper {
+    width: 70%;
+    margin: 0 auto;
+    min-height: calc(100vh - 28px);
+}
+
+.hamburgerButton {
+    width: 50px;
+    height: 50px;
+    margin-top: 5px;
+    }
+
+.nav-logo {
+    width: auto;
+    height: 60px;
+    border-radius: 7px;
+    margin-right: auto;
+    }
+
+.topNav {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    overflow: hidden;
+    position: relative;
+    margin-top: 5%;
+
+    }
+    
+#navLinks, #navLinks a {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 15px;
+    font-family: "HackneyPersonalUseOnly", "Bebas Neue", "Impact", "sans-serif";
+    font-size: 6vh;
+    letter-spacing: 3px;
+    text-decoration: none;
+    color:#000;
+    }
+
+#navLinks {
+    display: none;
+} 
+
+#navLinks a:hover {
+    background-color: #394a4a;
+    color: white;
+    border-radius: 5px;
+    -webkit-transition: background-color 0.6s ease-out, color 0.6s ease-out;
+    -moz-transition: background-color 0.6s ease-out, color 0.6s ease-out;
+    -o-transition: background-color 0.6s ease-out, color 0.6s ease-out;
+    transition: background-color 0.6s ease-out, color 0.6s ease-out;
+    }   
+
+.copyright {
+    display: flex;
+    justify-content: center;
+}    
+
+/* RECIPE PAGE */
+.searchH1 {
+    padding-bottom: 5%;
+}
+
+#brewSearch {
+    width: 400px;
+    margin: auto;
+    margin-top: 30%;
+}
+
+input {
+    padding: 4px 10px;
+    border: 0;
+    font-size: 16px;
+    border: 1px solid #213838;
+    border-radius: 5px;
+}
+
+#search {
+    width: 70px;
+    height: 27px;
+    background-color:#213838; 
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.searchResult {
+    width: 60%;
+    height: 45%;
+}
