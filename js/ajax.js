@@ -1,28 +1,59 @@
-const searchDiv = document.getElementById('searchResult');
-const userInput = document.getElementById('userInput');
-const searchBTN = document.getElementById('search');
-const recipes = 'https://api.brewersfriend.com/v1/recipes83e1ccd597845308bf0a82cfdb4f09d974ae1b8';
+const urlRandom = 'https://www.thecocktaildb.com/api/json/v1/1/random.php';
+const error = 'Error. There was a problem retrieving data. Status Code: ';
+const btn = document.getElementById('search');
 
 
-function getBEERjason(url, callback) {
-    const xhr = new XMLHttpRequest();
-    xhr.open('GET', url);
-    xhr.onload = () => {
-        if(xhr.status === 4 || xhr.status === 200) {
-            let data = JSON.parse(xhr.responseText);
-       return callback(data);
-           }
-        };
-        xhr.send();
+function randomCocktail() {                              
+fetch(urlRandom)
+  .then((response) => { response.json()                  
+  .then((data) => {displayRandomCocktail(data);    
+    if (response.status !== 200) {
+    console.log(`${error} response.status`);
+    return;
+   }                                 
+      });
     }
+  )
+}
+randomCocktail();
 
 
-searchBTN.addEventListener('click', (event) => {
-    getBEERjason(recipes);
-    })
-   
-//   function userFeedback() {
-//   const input = userInput.value;
-//   return `You searched for ${input}`;
-    
-//   }
+function displayRandomCocktail(cocktail) {
+    console.log(cocktail.drinks[0]);
+
+        function createElement(elementName, property, value) {
+            const element = document.createElement(elementName);
+            element[property] = value;
+            return element;
+        }    
+  
+const div = document.querySelector('#randomDiv');
+const beverageName = document.createElement('h3');
+beverageName.innerHTML = cocktail.drinks[0].strDrink;
+div.appendChild(beverageName);
+
+
+const img = document.createElement('img');
+img.src = cocktail.drinks[0].strDrinkThumb;
+div.appendChild(img);
+
+
+
+for(let i = 1; i < 16; i++) {
+    console.log(i);
+    if(cocktail.drinks[0][`strIngredient${i}`] || cocktail.drinks[0][`strMeasure${i}`] === null || cocktail.drinks[0][`strIngredient${i}`] || cocktail.drinks[0][`strMeasure${i}`]=== ' ') {
+        break;
+    }
+const list = document.createElement('ul');
+const ingredients = document.createElement('li');
+ingredients.innerHTML = cocktail.drinks[0][`strMeasure${i}`] +': ' + cocktail.drinks[0][`strIngredient${i}`];
+div.appendChild(list);
+div.appendChild(ingredients);
+
+};
+
+const instructions = document.createElement('p');
+instructions.innerHTML = cocktail.drinks[0].strInstructions;
+div.appendChild(instructions)
+}
+
