@@ -1,14 +1,5 @@
 @charset "UTF-8";
 
-/*----------------------------------------
-  |                INDEX                 |
-  |         -M = (Mobile-First)          |
-  |      -1 = (First Media Quiery)       |
-  |     -2 = (Second Media Quiery)       |
-  |      -3 = (Third Media Quiery)       |
-  |     -4 = (Fourth Media Quiery)       |
-  |     -5 = (Fifth Media Quiery)        |
-  ----------------------------------------*/
 /*--------------------------------------------
            BASE STYLES (MOBILE-FIRST)
 --------------------------------------------*/  
@@ -16,7 +7,7 @@
     box-sizing: border-box;
 }
 
-/***** BASIC TEXT STYLES-M ******/
+/***** BASIC TEXT STYLES ******/
 @font-face {
     font-family: 'HackneyPersonalUseOnly';
     src: url('../font/HackneyPersonalUseOnly.eot');
@@ -44,8 +35,9 @@ h1,h3,.display-m {
     font-size: 2rem;
     margin-bottom: -10%;
     }
+
 h3 {
-    align-items: flex-end;
+    /* align-items: flex-end; */
     font-size: 1.5rem;
  }
 
@@ -62,30 +54,21 @@ h2 {
     letter-spacing: 4.7px;
     font-size: 1.7rem;
     margin-bottom: 5%;
-    color:#213838
     }
-.displayRandomCocktail li{
-    text-align: left;
-}    
-
 
 .home-image {
-    display: flex;
-    flex-wrap: wrap;
-    flex: 1 1 auto;
-    border-radius: 10px 10px 10px 10px;
-    filter: grayscale(100%); 
-    opacity: 0.8;
-    object-fit: cover;
-    max-width: 100%;
-    width: 300px;
-    height: 500px;
-    margin-top: 20%;
+   display: flex;
+   flex: 1 1 auto;
+   border-radius: 10px 10px 10px 10px;
+   opacity: .90;
+   object-fit: cover;
+   max-width: 100%;
+   margin-top: 20%;
 }
 
 /***** Mobile Navigation-M *****/
 .wrapper {
-    width: 70%;
+    width: 85%;
     margin: 0 auto;
     min-height: calc(100vh - 28px);
 }
@@ -110,7 +93,6 @@ h2 {
     overflow: hidden;
     position: relative;
     margin-top: 5%;
-
     }
     
 #navLinks, #navLinks a {
@@ -123,6 +105,7 @@ h2 {
     letter-spacing: 3px;
     text-decoration: none;
     color:#000;
+    z-index: 1;
     }
 
 #navLinks {
@@ -130,7 +113,7 @@ h2 {
 } 
 
 #navLinks a:hover {
-    background-color: #394a4a;
+    background-color: #08343c;
     color: white;
     border-radius: 5px;
     -webkit-transition: background-color 0.6s ease-out, color 0.6s ease-out;
@@ -139,6 +122,23 @@ h2 {
     transition: background-color 0.6s ease-out, color 0.6s ease-out;
     }   
 
+.social-links {
+    display: flex;
+    flex-direction: row;
+    flex: 1 1 auto;
+    justify-content: center;
+    }
+
+.icons {
+    padding: 8px;
+    }
+
+.icons:hover {
+    transform: scale(1.2);
+    max-width: 70px;
+    }
+
+
 .copyright {
     display: flex;
     justify-content: center;
@@ -146,45 +146,17 @@ h2 {
 
 /* RECIPE PAGE */
 
-#brewSearch {
+#randomDrink {
     display: flex;
     flex-direction: column;
-    margin-top: 30%;
+    margin-top: 25%;
     align-items: center;
-}
-
-input {
-    padding: 4px 10px;
-    border: 0;
-    font-size: 16px;
-    border: 1px solid #213838;
-    border-radius: 5px;
-}
-
-#search {
-    font-family: "HackneyPersonalUseOnly", "Bebas Neue", "Impact", "sans-serif";
-    font-size: 1.5rem;
-    letter-spacing: 4px;
-    width: 232px;
-    height: 40px;
-    background-color:#213838; 
-    color: #fff;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-bottom: 5%;
-    box-shadow: 3px 3px #696969;
-}
-
-.searchResult {
-    width: 60%;
-    height: 45%;
 }
 
 #randomDiv {
     Display: flex;
     flex-direction: column;
     align-items: center;
-    
 }
 
 #randomDiv img{
@@ -194,11 +166,238 @@ input {
     width: 100%;
     height: auto;
     object-fit: cover;
-    border-radius: 10px 10px 10px 10px;
-    /* filter: grayscale(100%);  */
-    /* opacity: 0.8; */
+    border-radius: 10px 10px 10px 10px; 
     margin-top: 10%;
     object-fit: cover;
-   
-   
 }
+
+/***** CONTACT SECTION-M ******/
+.contentForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1 1 auto;
+    padding-left: 5%;
+    padding-right: 5%;
+    margin-top: 25%;
+    }
+
+ p {
+    width: 100%;
+    padding: 5%;
+    max-width: 305px;
+    justify-content: center;
+    }  
+
+
+.form {
+    display: flex;
+    flex-direction: column;
+    min-width: 200px;
+    max-width: 500px;
+    width: 320px;
+    border-radius: 10px;
+    padding: 10px 20px;
+   }
+
+input[type="text"],
+input[type="email"],
+textarea, select {
+   margin-top: 10%;
+   margin-bottom: 10%;
+   padding: 15px;
+   width: 100%;
+   height: auto;
+   border-radius: 5px;
+   border: 1px solid #000;
+   text-transform: uppercase;
+}
+
+textarea {
+    min-height: 130px;
+    margin-bottom: 0%;
+    }   
+
+legend {
+    margin-bottom: 0px;
+    font-weight: lighter;
+    }
+
+fieldset {
+    margin-bottom: 30px;
+    border: none;
+    font-size: .75rem;
+    text-transform: uppercase;
+    }
+
+.number {
+    background-color:#08343c;
+    color: #fff;
+    height: 25px;
+    width: 25px;
+    border-radius: 100%;
+    display: inline-block;
+    text-align: center;
+    line-height: 25px;
+    font-size: 0.8rem;
+    margin-right: 4px;
+    }
+
+
+/***** ToolTip styles-M *****/
+.toolTip {
+    flex: 1 1 auto;
+    border-radius: 20px;
+    display: none;
+    font-size: .75rem;
+    text-align: center;
+    background: #08343c;
+    color: #fff;
+    padding: 7px;
+    position: absolute;
+    width: 160px;
+    margin-top: -19px;
+    margin-left: 135px;
+    }
+
+.toolTip:after {
+    border: solid transparent;
+    content: " ";
+    pointer-events: none;
+    border-color: rgba(136, 183, 213, 0);
+    border-bottom-color:#08343c;
+    border-width: 15px;
+    position: absolute;
+    width: 0;
+    height: 0;
+    right: 5%;
+    top: -40%;
+    margin-top: -8px;
+    }
+
+#thankyouMes {
+    font-size: 1rem;
+    font-family: "HackneyPersonalUseOnly", "Bebas Neue", "Helvetica", "sans-serif";
+    color: #000;
+    line-height: 3vh;
+    letter-spacing: 2px;
+    width: 300px;
+    text-align: center;
+    align-self: center;
+    }
+/**** Form End ****/
+
+/*** product-grid ***/
+main {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    flex: 1 1 auto; 
+}
+
+#btnPro, #btnProRem {
+    display: inline;
+    
+}
+
+  .randomBtn, #btnPro, #btnProRem {
+    display: inline-block;
+    font-family: "HackneyPersonalUseOnly", "Bebas Neue", "Impact", "sans-serif";
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    background-color: #08343c;
+    color: #fff;
+    box-shadow: 2px 2px #696969;
+    width: 75px;
+    height: 40px;
+    padding: 10px;
+    border-radius: 5px;
+    border-width: 1px 1px 2px;
+    cursor: pointer;
+    text-align: center;
+}  
+#btnPro {
+   margin-right: 20px;
+}
+
+#btnProRem {
+    margin-top: -40px;
+    background-color: #3c0808; 
+    margin-left: 50%;
+    /* margin-right: auto; */
+   }
+
+.btnDiv {
+    max-width: 280px;
+}   
+
+.randomBtn {
+    align-self: center;
+    width: 222px;
+    letter-spacing: 4px;
+    }
+    
+.btn:active {
+    background-color: black;
+}  
+
+.shopDiv {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 25%;
+    margin-bottom: -15%;
+}
+
+#cart {
+    padding: 5px;
+    cursor: pointer;
+}
+
+.h1-shop {
+color: #3c0808; 
+}
+
+ .productImg {
+    margin: 5px;
+    object-fit: cover;
+    max-width: 100%;
+    width: 220px;
+    height: auto;
+    border-radius: 25px;
+    margin-top: 25%;
+    border: 1px solid black; 
+ }
+
+ .description {
+     max-width: 85%;
+ }
+
+/* #lightbox {
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    display: none;
+    }
+    
+#lightbox.active {
+    display: flex;
+    align-items: center;
+    }
+
+#lightbox img {
+    max-width: 100%;  
+    max-height: 100%;
+    padding: 5px;
+    background-color: #fff;
+    border-radius: 25px;
+    transform: scale(.90);
+   
+    }    */
+
+
+    

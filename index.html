@@ -1,45 +1,63 @@
-<head>
-    <meta charset= "ctf-8"/>
-    <meta name= "viewport" content= "width=device-width, initial-scale=1"/>
-    <meta name= "description" content= "Brew Master, homebrewing application"/>
-    <meta name = "author" content= "Ashley Needy"/>
+<Doctype html>
+    <html lang= "en">
+      <head>
+        <meta charset= "ctf-8"/>
+        <meta name= "viewport" content= "width=device-width, initial-scale=1"/>
+        <meta name= "description" content= "Brew Master, homebrewing application"/>
+        <meta name = "author" content= "Ashley Needy"/>
 
-    <!-- TITLE -->
-    <title>Brew Master</title>
+        <!-- TITLE -->
+        <title>Brew Master</title>
 
-        <!--LINK TO CSS-->
-        <link rel= "stylesheet" href= "css/normalize.css">
-        <link rel= "stylesheet" href= "css/styles.css">
-</head>
-    <body>
-         <div class= wrapper>
-            <header class= "container" role= "banner">
-                <nav role= "navigation">
-                   <div class="topNav"> 
-                    <img class= "nav-logo" src="icons/njor-logo.png" alt="njor logo"> 
-                      <button onclick="toggle()" class="hamburgerButton" aria-label="hamburger navigation menu" style= "background: url(icons/blackHamburger.svg)"></button></div>
-                   <div id="navLinks">
-                      <a href="index.html">Home</a>
-                      <a href="recipes.html">Recipes</a>
-                      <a href="featured.html">About</a>
-                      <a href="contact.html">Contact</a>
-                    </div> 
-                </nav>
-
-                <figure> 
-                    <div><img class="home-image" src="images/pradnyal-gandhi-1MqDCpA-2hU-unsplash.jpg" alt="" title=""/></div> 
-                        <figcaption class= "figGrid"></figcaption>
-                </figure>
-               
-
-            </header>
-         </div>
-            <footer class= "bigFoot" role= "contentinfo">
-                <hr class= "footerLine">
-                <span class= "copyright">&copy; Brew Master 2021</span>
-            </footer>
-         <!-- JS LINKS -->
-        <script src= "js/hamburger.js"></script>
-        <!-- <script src= ""></script>-->
-     </body>
-</html>
+            <!--LINK TO CSS-->
+            <link rel= "stylesheet" href= "css/normalize.css">
+            <link rel= "stylesheet" href= "css/styles.css">
+    </head>
+        <body>
+            <div class= wrapper>
+                <header class= "container" role= "banner">
+                    <nav role= "navigation">
+                    <div class="topNav"> 
+                        <img class= "nav-logo" src="icons/njor-logo.png" alt="njor logo"> 
+                        <button onclick="toggle()" class="hamburgerButton" aria-label="hamburger navigation menu" style= "background: url(icons/blackHamburger.svg)"></button></div>
+                    <div id="navLinks">
+                        <a href="index.html">Home</a>
+                        <a href="recipes.html">Recipes</a>
+                        <a href="products.html">Products</a>
+                        <a href="contact.html">Contact</a>
+                        </div> 
+                    </nav>
+                    <div class="ageVerify">
+            <!-- <h2>Please confirm your date of birth</h2>
+            <input maxlength="2" type="text" id="day" placeholder="DD" alt="D.O.B">
+            <input maxlength="2" type="text" id="month" placeholder="MM" alt="D.O.B">
+            <input maxlength="4" type="text" id="year"  placeholder="YYYY" alt="D.O.B">
+            <div class="submitVerify">
+                <button id="om_check" type="button">Enter</button>
+            </div>
+            <div id="om_error"></div> -->
+        </div>
+                    <figure> 
+                        <div><img class="home-image" src="images/homePage.jpg"  alt="bourbon barrels" title="njor brewery"/></div> 
+                            <figcaption class= "figGrid"></figcaption>
+                    </figure>
+            
+                </header>
+            </div>
+                <footer class= "bigFoot" role= "contentinfo">
+                    <!-- Social Media Icons -->
+                <ul class= "social-links">
+                    <li class="icons"><a href="https://www.facebook.com/KBBarrel/"><img src="icons/faceNovel.png" width="50px" height="50px" alt="facebook"/></a></li>
+                    <li class="icons"><a href="https://www.youtube.com/watch?v=caJzx6XWoOw"><img src="icons/youtubes.png" width="50px" height="50px" alt="Link to youtube"/></a></li>
+                    <li class="icons"><a href="https://twitter.com/lexbrewingco?lang=en"><img src="icons/tweeter.png" width="50px" height="50px" alt="Link to twitter"/></a></li>
+                    <li class="icons"><a href="https://www.instagram.com/lexingtonbrewingco/?hl=en"><img src="icons/insta.png" width="50px" height="50px" alt="Link to instagram"/></a></li>
+                    <li class="icons"><a href="https://www.brewersassociation.org/independent-craft-brewer-seal/"><img src="icons/independent.png" width="35x" height="50px" alt="Brewers Association Seal"/></a></li>
+                </ul> 
+                    <hr class= "footerLine">
+                    <span class= "copyright">&copy; Brew Master 2021</span>
+                </footer>
+            <!-- JS LINKS -->
+            <script src= "js/hamburger.js"></script>
+            <!-- <script src= ""></script>-->
+        </body>
+    </html>

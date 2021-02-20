@@ -1,3 +1,4 @@
+<Doctype html>
 <html lang= "en">
 <head>
     <meta charset= "ctf-8"/>
@@ -22,25 +23,48 @@
                    <div id="navLinks">
                       <a href="index.html">Home</a>
                       <a href="recipes.html">Recipes</a>
-                      <a href="featured.html">Featured</a>
+                      <a href="products.html">Products</a>
                       <a href="contact.html">Contact</a>
                     </div> 
                 </nav>
-
-                <figure> 
-                    <div><img class="home-image" src="images/pradnyal-gandhi-1MqDCpA-2hU-unsplash.jpg" alt="" title=""/></div> 
-                        <figcaption class= "figGrid"></figcaption>
-                </figure>
-               
-
             </header>
-         </div>
+            <div class="contentForm">
+                <form class="form" action="" method="post">
+                    <h2 class="h2con">Contact!</h2>
+                        <fieldset>
+                            <legend><span class="number">1</span>Your Basic Info</legend>
+                            <input required type="text" placeholder="First Name:" id="firstName" name="your_name">
+                            <span class="toolTip">Can only contain letters a-z</span>
+
+                            <input required type="text" placeholder="Last Name:" id="lastName">
+                            <span class="toolTip">Can only contain letters a-z</span>
+
+                            <input required type="email" placeholder="email:" id="email" name="your_email">
+                            <span class="toolTip">Must be a valid email address</span>
+                         </fieldset>
+            
+                       <fieldset>
+                            <legend><span class="number">2</span>Contact</legend>
+                            <textarea id="feedback" placeholder="Your Thoughts..." name="user_feedback"></textarea>
+                        </fieldset>
+                    <button onclick="thanks()" class="btn" type="submit">Submit</button>
+                    <p id="thankyouMes"></p>
+               </form>
+            </div>
             <footer class= "bigFoot" role= "contentinfo">
+             <!-- Social Media Icons -->
+                <ul class= "social-links">
+                    <li class="icons"><a href="https://www.facebook.com/KBBarrel/"><img src="icons/faceNovel.png" width="50px" height="50px" alt="facebook"/></a></li>
+                    <li class="icons"><a href="https://www.youtube.com/watch?v=caJzx6XWoOw"><img src="icons/youtubes.png" width="50px" height="50px" alt="Link to youtube"/></a></li>
+                    <li class="icons"><a href="https://twitter.com/lexbrewingco?lang=en"><img src="icons/tweeter.png" width="50px" height="50px" alt="Link to twitter"/></a></li>
+                    <li class="icons"><a href="https://www.instagram.com/lexingtonbrewingco/?hl=en"><img src="icons/insta.png" width="50px" height="50px" alt="Link to instagram"/></a></li>
+                    <li class="icons"><a href="https://www.brewersassociation.org/independent-craft-brewer-seal/"><img src="icons/independent.png" width="35x" height="50px" alt="Brewers Association Seal"/></a></li>
+                </ul> 
                 <hr class= "footerLine">
-                <span class= "copyright">&copy; Brew Master, Homebrewing 2021</span>
+                <span class= "copyright">&copy; Brew Master 2021</span>
             </footer>
          <!-- JS LINKS -->
         <script src= "js/hamburger.js"></script>
-        <!-- <script src= "js/app.js"></script> -->
+        <script src= "js/regex.js"></script> 
     </body>
 </html>
