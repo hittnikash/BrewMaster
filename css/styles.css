@@ -37,7 +37,6 @@ h1,h3,.display-m {
     }
 
 h3 {
-    /* align-items: flex-end; */
     font-size: 1.5rem;
  }
 
@@ -56,14 +55,29 @@ h2 {
     margin-bottom: 5%;
     }
 
+.index-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.index-displayTxt1 {
+ margin-top: 10%;
+ text-align: left;
+ color: #08343c;
+}
+
+.index-displayTxt3 {
+    margin-top: -7%;
+}
+
 .home-image {
-   display: flex;
    flex: 1 1 auto;
    border-radius: 10px 10px 10px 10px;
    opacity: .90;
    object-fit: cover;
    max-width: 100%;
-   margin-top: 20%;
+   margin-top: 12%;
 }
 
 /***** Mobile Navigation-M *****/
@@ -71,6 +85,14 @@ h2 {
     width: 85%;
     margin: 0 auto;
     min-height: calc(100vh - 28px);
+}
+
+.navRule, .footerLine {
+    border: 0;
+    height: 1px;
+    background: #333;
+    background-image: linear-gradient(to right, #ccc, #333, #ccc); 
+       
 }
 
 .hamburgerButton {
@@ -81,7 +103,7 @@ h2 {
 
 .nav-logo {
     width: auto;
-    height: 60px;
+    height: 63px;
     border-radius: 7px;
     margin-right: auto;
     }
@@ -138,6 +160,9 @@ h2 {
     max-width: 70px;
     }
 
+.footerline {
+    width: 85%;
+}
 
 .copyright {
     display: flex;
@@ -149,14 +174,14 @@ h2 {
 #randomDrink {
     display: flex;
     flex-direction: column;
-    margin-top: 25%;
+    margin-top: 15%;
     align-items: center;
 }
 
 #randomDiv {
     Display: flex;
     flex-direction: column;
-    align-items: center;
+    /* align-items: center; */
 }
 
 #randomDiv img{
@@ -165,10 +190,25 @@ h2 {
     flex: 1 1 auto;
     width: 100%;
     height: auto;
-    object-fit: cover;
     border-radius: 10px 10px 10px 10px; 
-    margin-top: 10%;
+   
     object-fit: cover;
+}
+
+img {
+    margin-bottom: 10px;
+}
+
+h3 {
+    text-align: center;
+    margin-top: 45px;
+    margin-bottom: 12px; 
+    color:#3c0808;
+}
+
+li {
+    margin-top: 10px;
+    text-align: justify;
 }
 
 /***** CONTACT SECTION-M ******/
@@ -288,7 +328,7 @@ fieldset {
 /**** Form End ****/
 
 /*** product-grid ***/
-main {
+.main {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
