@@ -35,11 +35,40 @@ function createListener(validator) {
         showOrHideTip(showTip, tooltip);
     };
 }
+/* Event Listeners */
 firstNameInput.addEventListener("input", createListener(isValidName));
 lastNameInput.addEventListener("input", createListener(isValidName));
 emailInput.addEventListener("input", createListener(isValidEmail));
+form.addEventListener('submit', postData);
 
-function thanks() {
-    const userName = document.getElementById('name').value;
-    document.getElementById("thankyouMes").innerHTML = `Thank you ${userName}, we appreciate your feedback!`;
-}
+function checkStatus(response) {
+    if (response.ok) {
+      return Promise.resolve(response);
+    } else {
+      return Promise.reject(new Error(response.statusText));
+    }
+  }
+
+/* Post comments to jsonPlaceholder */
+function postData(e) {
+    e.preventDefault();
+    const form = document.getElementById('form');
+    const firstName = document.getElementById('firstName').value;
+    const lastName = document.getElementById('lastName').value;
+    const feedback = document.getElementById('feedback').value;
+   
+    const config = {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        } ,
+        body: JSON.stringify({firstName, lastName, feedback })
+    }
+  
+    fetch('https://jsonplaceholder.typicode.com/comments', config)
+      .then(checkStatus)
+      .then(res => res.json())
+      .then(data => console.log(data))
+  
+  }
+  

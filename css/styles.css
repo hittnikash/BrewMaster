@@ -28,7 +28,7 @@
     flex: 1 1 auto;
     }
 
-h1,h3,.display-m {
+h1, h3, .display-m {
     font-family: "HackneyPersonalUseOnly", "Bebas Neue", "Impact", "sans-serif";
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -55,30 +55,6 @@ h2 {
     margin-bottom: 5%;
     }
 
-.index-main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.index-displayTxt1 {
- margin-top: 10%;
- text-align: left;
- color: #08343c;
-}
-
-.index-displayTxt3 {
-    margin-top: -7%;
-}
-
-.home-image {
-   flex: 1 1 auto;
-   border-radius: 10px 10px 10px 10px;
-   opacity: .90;
-   object-fit: cover;
-   max-width: 100%;
-   margin-top: 12%;
-}
 
 /***** Mobile Navigation-M *****/
 .wrapper {
@@ -143,6 +119,37 @@ h2 {
     -o-transition: background-color 0.6s ease-out, color 0.6s ease-out;
     transition: background-color 0.6s ease-out, color 0.6s ease-out;
     }   
+
+
+ 
+    
+/*** homepage ***/
+.index-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.index-displayTxt1 {
+    margin-top: 10%;
+    text-align: left;
+    color: #08343c;
+}
+
+.index-displayTxt3 {
+    margin-top: -7%;
+}
+
+.home-image {
+    flex: 1 1 auto;
+    border-radius: 10px 10px 10px 10px;
+    opacity: .90;
+    object-fit: cover;
+    max-width: 100%;
+    margin-top: 12%;
+}
+
+
 
 .social-links {
     display: flex;
@@ -222,6 +229,13 @@ li {
     margin-top: 25%;
     }
 
+.h2con {
+    text-align: center;
+    font-size: 2rem;
+    color:#08343c;
+}    
+    
+
  p {
     width: 100%;
     padding: 5%;
@@ -251,6 +265,10 @@ textarea, select {
    border-radius: 5px;
    border: 1px solid #000;
    text-transform: uppercase;
+   background-color: #08343c2e;
+   
+  
+   
 }
 
 textarea {
@@ -268,6 +286,7 @@ fieldset {
     border: none;
     font-size: .75rem;
     text-transform: uppercase;
+    
     }
 
 .number {
@@ -315,16 +334,6 @@ fieldset {
     margin-top: -8px;
     }
 
-#thankyouMes {
-    font-size: 1rem;
-    font-family: "HackneyPersonalUseOnly", "Bebas Neue", "Helvetica", "sans-serif";
-    color: #000;
-    line-height: 3vh;
-    letter-spacing: 2px;
-    width: 300px;
-    text-align: center;
-    align-self: center;
-    }
 /**** Form End ****/
 
 /*** product-grid ***/
@@ -340,7 +349,7 @@ fieldset {
     
 }
 
-  .randomBtn, #btnPro, #btnProRem {
+ .randomBtn, #btnPro, #btnProRem {
     display: inline-block;
     font-family: "HackneyPersonalUseOnly", "Bebas Neue", "Impact", "sans-serif";
     text-transform: uppercase;

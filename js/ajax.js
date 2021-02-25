@@ -1,4 +1,4 @@
-const urlRandom = 'https://www.thecocktaildb.com/api/json/v1/1/random.php';
+const urlRandom = `https://www.thecocktaildb.com/api/json/v2/${api-key}/random.php`;
 const error = 'Error. There was a problem retrieving data. Status Code: ';
 const div = document.querySelector('#randomDiv');
 const btnTry = document.getElementById('btn');
