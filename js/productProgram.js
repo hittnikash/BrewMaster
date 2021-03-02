@@ -18,23 +18,26 @@ for (let i = 0; i < products.length; i ++) {
     `;
 
     content.appendChild(addProduct)
-    // click on item add button that items product.price to the cart.
-   
 } 
 
+
+
 content.addEventListener('click', (e) => {
-    e.preventDefault()
+    e.preventDefault();
     const button = e.target;
     const action = button.textContent;
+    const item = e.target.value;
     if (action === 'Add') {
-        cartArr.push(e.target.value);
+        cartArr.push(item);
         console.log(cartArr);
-    } else if (action === 'Remove') {
-        const filterd = cartArr.filter(button => e.target.value) 
-        cartArr.pop(e.target.value)
-        console.log(cartArr);
-        console.log(filtered);
+        } else if (action === 'Remove') {
+            // cartArr.pop(item);
+            // console.log(cartArr);
+
+         filtered = cartArr.filter(item => button === 'Remove'); {
+          console.log(filtered);
+    
+         }
     }
-  }
-})
+});
 

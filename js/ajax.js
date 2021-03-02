@@ -1,4 +1,3 @@
-const urlRandom = `https://www.thecocktaildb.com/api/json/v2/${api-key}/random.php`;
 const error = 'Error. There was a problem retrieving data. Status Code: ';
 const div = document.querySelector('#randomDiv');
 const btnTry = document.getElementById('btn');
@@ -7,8 +6,9 @@ const btnTry = document.getElementById('btn');
       window.location.reload();
   })
 
-  function randomCocktail() {                              ///fetch request/response/status
-  fetch(urlRandom)
+///fetch request/response/status
+  function randomCocktail() {                              
+  fetch(`https://www.thecocktaildb.com/api/json/v2/${api}/random.php`)
     .then((response) => { response.json()                  
     .then((data) => {displayRandomCocktail(data);    
       if (response.status !== 200) {
@@ -21,18 +21,21 @@ const btnTry = document.getElementById('btn');
   }
   randomCocktail();
 
-  function createElement(elementName, property, value) {   ///create my elements/properties & values.
+  ///create my elements/properties & values.
+  function createElement(elementName, property, value) {   
       const element = document.createElement(elementName);
       element[property] = value;
       return element;
       }
 
-  function appendElements(elementName, property, value) {      /// append my elements/properties & values.
+ /// append my elements/properties & values.     
+  function appendElements(elementName, property, value) {      
       const element = createElement(elementName, property, value);
       div.appendChild(element); 
       }
-      
-  function displayRandomCocktail(cocktail) {                    /// display/ append drink name, and photo
+
+   /// display/ append drink name, and photo    
+  function displayRandomCocktail(cocktail) {                   
     console.log(cocktail.drinks[0]);
       appendElements('h3', 'innerHTML', `${cocktail.drinks[0].strDrink}`);
       appendElements('img', 'src', `${cocktail.drinks[0].strDrinkThumb}`);
@@ -49,11 +52,11 @@ const btnTry = document.getElementById('btn');
       
   ///-------------------2nd Request------------------------------------///
 
-// const urlSearch = 'https://www.thecocktaildb.com/api/json/v1/1/random.php';
+// const urlSearch = 'https://www.thecocktaildb.com/api/json/v2/1/random.php';
 // const searchDiv = document.getElementById('searchDiv');
 
 //   function searchForDrink() {                              ///fetch request/response/status
-//   fetch(urlRandom)
+//   fetch()
 //     .then((response) => { response.json()                  
 //     .then((data) => {searchForDrink(data);    
 //       if (response.status !== 200) {
