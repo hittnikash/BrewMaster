@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+    <html lang= "en">
+        <head>
+            <meta charset= "utf-8"/>
+            <meta name= "viewport" content= "width=device-width, initial-scale=1"/>
+            <meta name= "description" content= "Brew Master, homebrewing application"/>
+            <meta name = "author" content= "Ashley Needy"/>
+
+            <!-- TITLE -->
+            <title>Brew Master</title>
+
+            <!--LINK TO CSS-->
+            <link rel= "stylesheet" href= "css/normalize.css">
+            <link rel= "stylesheet" href= "css/styles.css">
+        </head>
+    <body>
+        <div class= "wrapper">
+            <header class= "container" role= "banner">
+            <nav role= "navigation">
+                <div class="topNav"> 
+                    <img class= "nav-logo" src="icons/w2.png" alt="njor logo"> 
+                    <button onclick="toggle()" class="hamburgerButton" aria-label="hamburger navigation menu" style= "background: url(icons/blackHamburger.svg)"></button></div>
+                <div id="navLinks">
+                    <a href="index.html">Home</a>
+                    <a href="brews.html">Brews</a>
+                    <a href="cocktails.html">Cocktails</a>
+                    <a href="products.html">products</a>
+                    <a href="contact.html">Contact</a>
+                </div> 
+            </nav>
+            </header>
+                <hr class= "navRule">
+            <main class= "index-main">
+        <div>
+            <img class="home-image" src="images/equipment.png"  alt="homebrewing equipment" title="homebrewing equipment"/>
+            <h3>Necessary Equipment</h3>
+            <ul class= "equip">
+                <li>Five-Gallon Brew Bucket</li>
+                <li>Five-Gallon Glass Carboy</li>
+                <li>4-5 Gallon Stainless Pot or Brew Kettle</li>
+                <li>Thermometer</li>
+                <li>Sanitizer & cleanser</li>
+                <li>Tilt digital hydrometer or Hydrometer</li>
+                <li>bottle capper or kegging setup</li>
+                <li>long stainless spoon</li>
+                <li>Wort Chiller</li>
+                <li>Airlock</li>
+                <li>Hoses</li>
+            </ul>
+
+            <h3>The Brewing Process</h3>
+            <p>Below is the process for extract brewing. The process is generic and fairly simple. Keep in mind depending upon the recipe and the style your malt and hop additions and fermentation times may vary.
+            <br><b>SANITIZE:</b><br> Thoroughly clean & sanitize all of your brewing equipment and utensils that will come into contact with any ingredients.
+            <br><b>STEEP GRAINS:</b><br> Pour 2.5 gallons of clean water into your brew kettle and begin to heat. When the temperature is between (150-165 degrees F) pour the crushed grains into the grain bag and tie a loose knot at the top of the bag. Steep the bag for twenty minutes- be careful not to allow your steeping water to exceed 170 degrees, which leeches tannis into the wort. Remove the grain bag without squeezing. Your water is now wort.
+            <img class="home-image" src="images/steepGrains.jpg"  alt="grains steeping" title="grains steeping"/> 
+            <br><b>BOIL:</b><br> Bring your wort to a gentle rolling boil, add Liquid Malt Extract. Continuously stir the extract into the wort so that it does not carmelize at the bottom of your kettle.
+            <img class="home-image" src="images/wort.jpg"  alt="wort" title="wort"/>  
+            <br><b>BITTERING HOPS:</b><br> Add hops and boil for 40 minutes. (Bittering hops add hop flavors.)
+            <br><b>AROMA SCHEDULE:</b><br> Next add the next pack of hops and boil for 5 minutes. (Aroma hops add a nice aroma to your brew.)
+            <img class="home-image" src="images/hops.jpg"  alt="hop additions" title="hop pellets"/>  
+            <br> <b>DRY MALT:</b><br> Add the Dry Malt Extract, and let boil for 5 minutes.
+            <img class="home-image" src="images/ingredients.jpg"  alt="ingredients" title="ingredients"/> 
+            <br><b>AROMA HOPS:</b><br> Add the final pack hops and let boil for 10 minutes.
+            <br> <b>TERMINATE BOIL:</b><br> You want to cool your wort rapidly to avoid contamination. If you have a wort chiller it should be clean and sanitized before use. If you do not have a wort chiller you can use an icebath. You want to bring the temperature down to 60 degrees, that is a healthy temp for your yeast to thrive but it will also give you an accurate hydrometer reading.
+            <br><b>ADD WATER:</b><br> Gently pour your wort to your primary fermenter. Then add enough clean water to bring yur volume up to 5 gallons. Thoroughly stir and then take a sample for your hydrometer reading. Make sure to record this number.
+            <br><b>PITCH YEAST:</b><br> Now you can sprinkle the yeast over the surface of your wort, gently stir and then secure the lid on you fermentation bucket. Fill your airlock to the water line and gently twist it into the grommit in the lid. Move the fermenter to a temperature-stable area between (53-59 degrees F).
+            <img class="home-image" src="images/yeasty.jpg"  alt="add yeast" title="add yeast"/> 
+            <br><b>PRIMARY FERMENTATION:</b><br> The wort will begin to ferment within 48 hours and you will notice co2 releasing out of the airlock. You should monitor the airlock for co2 release and take samples when it begins to slow down. Keep in mind different styles may require different fermentation times, see recipes, for guidelines. Any speciality ingredients or additives like barrel chips, or flavorings can be added during primary or secondary fermentation. 
+            <img class="home-image" src="images/primary.jpg"  alt="primary fermentation" title="primary fermentation"/> 
+            <br><b>SECONDARY FERMENTATION:</b><br> When the gravity remiains the same for two full days transfer your beer to a clean sanitized 5- gallon carboy. If you are using a top-feeding yeast (ale yeast) you should continue to monitor your brew & again follow guidelines for secondary fermentation. If you are using a bottom feeding yeast (lager yeast) Lower the temp 1 to 3 degrees per day until it reaches (35- 42 degrees F). Lager within this temperature range 3-4 weeks.
+            <img class="home-image" src="images/secondary.jpg"  alt="secondary fermentation" title="secondary fermentation"/>  
+            <br><b>NEXT STEPS:</b><br> Now its either kegging or bottiling day. So you need to get your hydrometer and take a final gravity and record this number. You can do the calculation, (OG-FG)* 131.25 = ABV% or use an ABV calculator to find the alcohol percentage.
+            <img class="home-image" src="images/hydrometer.jpg"  alt="final gravity reading" title="final gravity reading"/>  
+            <br><b>TO BOTTLE:</b><br> If you have chosen to bottle you will need to make sure all of your bottles and caps are clean and sanitized. In a small pan dissolve 5 oz of priming sugar into 2 cups of boiling water. Carefully pour this mixture into your beer and stir gently, avoiding the bottom which could have 3-4 inches of sediment. Begin siphoning beer into bottles, leaving 1 inch of head space and cap.
+            <img class="home-image" src="images/keg.jpg"  alt="kegs" title="kegs"/>   
+            <br><b>TO KEG:</b><br> There are several kegging methods out here, after testing different practices, this is what we have found works best. Siphon your beer into a clean, sanitized keg, and fill keg with co2. Inspect kegs for any leaks that may occur. Gently rock keg and then purge. Refill keg with co2 and let sit overnight. The following day store keg in your your setup, and hook up your co2 line. Co2 infuses into your beer faster at colder temperatures. Allow your keg to sit at about 10-15 psi for about a week but dont forget to monitor your regulator. When its time to serve turn the psi down to about 7. 
+            <img class="home-image" src="images/pouringBeer.gif"  alt="kegs" title="kegs"/>   
+            </p>
+        </div>  
+        </main>
+
+        <div id="results"></div>
+
+        </div>
+        <footer class= "bigFoot" role= "contentinfo">
+        <hr class= "footerLine">
+        <!-- Social Media Icons -->
+        <ul class= "social-links">
+            <li class="icons"><a href="https://www.facebook.com/KBBarrel/"><img src="icons/faceNovel.png" width="40px" height="40px" alt="facebook"/></a></li>
+            <li class="icons"><a href="https://www.youtube.com/watch?v=caJzx6XWoOw"><img src="icons/youtubes.png" width="40px" height="40px" alt="Link to youtube"/></a></li>
+            <li class="icons"><a href="https://twitter.com/lexbrewingco?lang=en"><img src="icons/tweeter.png" width="40px" height="40px" alt="Link to twitter"/></a></li>
+            <li class="icons"><a href="https://www.instagram.com/lexingtonbrewingco/?hl=en"><img src="icons/insta.png" width="40px" height="40px" alt="Link to instagram"/></a></li>
+        </ul> 
+        <span class= "copyright">&copy; Brew Master 2021</span>
+        </footer>
+    <!-- JS LINKS -->
+    <script src= "js/hamburger.js"></script>   
+    </body>
+</html>

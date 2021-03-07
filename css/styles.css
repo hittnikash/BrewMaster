@@ -55,12 +55,14 @@ h2 {
     margin-bottom: 5%;
     }
 
+.brewType {
+    margin-bottom: 5%;
+}    
 
 /***** Mobile Navigation-M *****/
 .wrapper {
     width: 85%;
-    margin: 0 auto;
-    min-height: calc(100vh - 28px);
+    margin: 0 auto; 
 }
 
 .navRule, .footerLine {
@@ -68,13 +70,11 @@ h2 {
     height: 1px;
     background: #333;
     background-image: linear-gradient(to right, #ccc, #333, #ccc); 
-       
 }
 
 .hamburgerButton {
     width: 50px;
     height: 50px;
-    margin-top: 5px;
     }
 
 .nav-logo {
@@ -82,6 +82,7 @@ h2 {
     height: 63px;
     border-radius: 7px;
     margin-right: auto;
+    margin-top: 5%;
     }
 
 .topNav {
@@ -91,6 +92,7 @@ h2 {
     overflow: hidden;
     position: relative;
     margin-top: 5%;
+    align-items: center;
     }
     
 #navLinks, #navLinks a {
@@ -119,9 +121,6 @@ h2 {
     -o-transition: background-color 0.6s ease-out, color 0.6s ease-out;
     transition: background-color 0.6s ease-out, color 0.6s ease-out;
     }   
-
-
- 
     
 /*** homepage ***/
 .index-main {
@@ -145,38 +144,63 @@ h2 {
     border-radius: 10px 10px 10px 10px;
     opacity: .90;
     object-fit: cover;
-    max-width: 100%;
+    width: 100%;
     margin-top: 12%;
+
 }
 
-
-
-.social-links {
+/* cocktail & Brews page */
+/* Style the buttons that are used to open and close the accordion panel */
+.menu {
     display: flex;
-    flex-direction: row;
-    flex: 1 1 auto;
-    justify-content: center;
-    }
-
-.icons {
+    flex-direction: column;
+    align-items: center;
+}
+.accordion, .accordionLink {
+    font-family: "HackneyPersonalUseOnly", "Bebas Neue", "Impact", "sans-serif";
+    background-color: #08343c;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    box-shadow: 2px 2px #696969;
+    border-width: 1px 1px 2px;
     padding: 8px;
-    }
+    width: 270px;
+    text-align: center;
+    border: 1px solid #000;
+    outline: none;
+    margin-bottom: 1%;
+  }
 
-.icons:hover {
-    transform: scale(1.2);
-    max-width: 70px;
-    }
 
-.footerline {
-    width: 85%;
-}
 
-.copyright {
-    display: flex;
-    justify-content: center;
-}    
 
-/* RECIPE PAGE */
+  .accordion:after {
+    content: '\02795'; /* Unicode character for (+) */
+    font-size: 13px;
+    color: rgb(255, 255, 255);
+    float: right;
+    margin-left: 5px;
+  }
+  
+  .active:after {
+    content: "\2796"; /* Unicode character for (-) */
+  }
+  
+  .active, .accordion:hover {
+    background-color: #000;
+    transition: 0.4s;
+  }
+  
+  .panel {
+    padding: 0 20px;
+    background-color: white;
+    display: none;
+    overflow: hidden;
+  }
 
 #randomDrink {
     display: flex;
@@ -186,24 +210,23 @@ h2 {
 }
 
 #randomDiv {
-    Display: flex;
+    display: flex;
     flex-direction: column;
-    /* align-items: center; */
+    justify-content: center;
+    text-align: left;
 }
 
-#randomDiv img{
+#randomDiv img, .brewImg{
     display: flex;
-    flex-wrap: wrap;
     flex: 1 1 auto;
     width: 100%;
     height: auto;
     border-radius: 10px 10px 10px 10px; 
-   
     object-fit: cover;
 }
 
 img {
-    margin-bottom: 10px;
+    margin-bottom: 25px;
 }
 
 h3 {
@@ -215,26 +238,69 @@ h3 {
 
 li {
     margin-top: 10px;
-    text-align: justify;
+    text-align: left;
+    
 }
 
-/***** CONTACT SECTION-M ******/
-.contentForm {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    flex: 1 1 auto;
-    padding-left: 5%;
-    padding-right: 5%;
-    margin-top: 25%;
-    }
+#brewSearch {
+    width: 400px;
+    margin: auto;  
+}
 
+input {
+    padding: 4px 10px;
+    border: 2px solid #08343c;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+input[type="search"] {
+    background-color: #08343c2e;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    padding: 15px;
+    height: auto;
+    border-radius: 5px;
+    border: 1px solid #000;
+    text-transform: uppercase;
+    background-color: #08343c2e;
+    
+}
+input[type="search"]:focus{
+    outline:0;
+    background-color:#fff;
+    border-color:#3c0808;
+  }
+
+#search {
+    width: 50%;
+}
+
+#submit {
+    font-family: "HackneyPersonalUseOnly", "Bebas Neue", "Impact", "sans-serif";
+    height: 48px;
+    width: 75px;
+    background-color: #08343c;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    box-shadow: 2px 2px #696969;
+    padding: 10px;
+    border-width: 1px 1px 2px;
+    text-align: center;
+    
+}
+
+
+/***** CONTACT SECTION-M ******/
 .h2con {
     text-align: center;
     font-size: 2rem;
     color:#08343c;
+    margin-bottom: 25%;
 }    
-    
 
  p {
     width: 100%;
@@ -242,7 +308,6 @@ li {
     max-width: 305px;
     justify-content: center;
     }  
-
 
 .form {
     display: flex;
@@ -266,10 +331,14 @@ textarea, select {
    border: 1px solid #000;
    text-transform: uppercase;
    background-color: #08343c2e;
-   
-  
-   
 }
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus, select:focus {
+    outline: 0;
+    background-color:#fff;
+    border-color:#3c0808;
+}  
 
 textarea {
     min-height: 130px;
@@ -286,11 +355,10 @@ fieldset {
     border: none;
     font-size: .75rem;
     text-transform: uppercase;
-    
     }
 
 .number {
-    background-color:#08343c;
+    background-color: #3c0808;
     color: #fff;
     height: 25px;
     width: 25px;
@@ -299,7 +367,7 @@ fieldset {
     text-align: center;
     line-height: 25px;
     font-size: 0.8rem;
-    margin-right: 4px;
+    margin-right: 10px;
     }
 
 
@@ -337,17 +405,6 @@ fieldset {
 /**** Form End ****/
 
 /*** product-grid ***/
-.main {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    flex: 1 1 auto; 
-}
-
-#btnPro, #btnProRem {
-    display: inline;
-    
-}
 
  .randomBtn, #btnPro, #btnProRem {
     display: inline-block;
@@ -371,13 +428,12 @@ fieldset {
 }
 
 #btnProRem {
-    margin-top: -40px;
     background-color: #3c0808; 
-    margin-left: 50%;
-    /* margin-right: auto; */
    }
 
 .btnDiv {
+    display: flex;
+    flex-direction: row;
     max-width: 280px;
 }   
 
@@ -386,7 +442,10 @@ fieldset {
     width: 222px;
     letter-spacing: 4px;
     }
-    
+
+#btnPro:active,    
+#btnProRem:active, 
+.randomBtn:active,  
 .btn:active {
     background-color: black;
 }  
@@ -402,13 +461,14 @@ fieldset {
 #cart {
     padding: 5px;
     cursor: pointer;
+    margin-left: 15%;
 }
 
 .h1-shop {
 color: #3c0808; 
 }
 
- .productImg {
+.productImg {
     margin: 5px;
     object-fit: cover;
     max-width: 100%;
@@ -417,11 +477,11 @@ color: #3c0808;
     border-radius: 25px;
     margin-top: 25%;
     border: 1px solid black; 
- }
+}
 
- .description {
-     max-width: 85%;
- }
+.description {
+    max-width: 85%;
+}
 
 /* #lightbox {
     position: fixed;
@@ -448,5 +508,98 @@ color: #3c0808;
    
     }    */
 
+.social-links {
+    display: flex;
+    flex-direction: row;
+    flex: 1 1 auto;
+    justify-content: center;
+    }
 
-    
+.icons {
+    padding: 8px;
+    }
+
+.icons:hover {
+    transform: scale(1.2);
+    max-width: 70px;
+    }
+
+.footerline {
+    width: 85%;
+}
+
+.copyright {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 5%;
+}    
+
+
+/*-------------------------------------------------------------
+                  SMALL iPADS
+-------------------------------------------------------------*/
+/****** Small Screen Media Queries: Targets VP sizes 540px & wider. *******/
+@media (min-width: 540px) {
+   
+ /* index page */
+.index-displayTxt1 {
+    font-size: 3rem;
+}
+.index-displayTxt2, .index-displayTxt3  {
+    font-size: 2rem;
+}
+p {
+    font-size: 1.2rem;
+    max-width: none;
+}
+
+/* recipe page */
+h1 {
+    font-size: 2.4rem;
+}
+.display-m {
+    margin-top: 3%;
+    font-size: 4rem;
+}
+h2 {
+    margin-top: 2%;
+    font-size: 2.1rem;
+}
+.randomBtn {
+    width: 260px;
+}
+
+
+
+
+}
+/*-------------------------------------------------------------
+                 i-PAD
+-------------------------------------------------------------*/
+/****** Large-ish Screen Media Queries: Targets VP sizes 1024px & wider. *******/
+/* @media (min-width: 1024px)      */
+
+
+
+
+
+
+
+/*-------------------------------------------------------------
+            LAPTOP 
+-------------------------------------------------------------*/
+/****** Large-ish Screen Media Queries: Targets VP sizes 1200px & wider. *******/
+/* @media (min-width: 1200px)  */
+
+
+
+
+
+
+
+
+/*-------------------------------------------------------------
+           DESKTOP BEGIN-5
+-------------------------------------------------------------*/
+/****** Large-ish Screen Media Queries: Targets VP sizes 1400px & wider. *******/
+/* @media (min-width: 1400px)  */

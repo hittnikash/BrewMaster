@@ -46,10 +46,12 @@ const btnTry = document.getElementById('btn');
               } else if (cocktail.drinks[0][`strMeasure${i}`]  === null || cocktail.drinks[0][`strMeasure${i}`] === '') {  
                 break;
               }
+      
       appendElements('li', 'innerHTML', `${cocktail.drinks[0][`strMeasure${i}`] +': ' + cocktail.drinks[0][`strIngredient${i}`]}`);}  // measurements
       appendElements('p', 'innerHTML', `${cocktail.drinks[0].strInstructions}`);}  //instructions
       
-      
+ 
+
   ///-------------------2nd Request------------------------------------///
 
 // const urlSearch = 'https://www.thecocktaildb.com/api/json/v2/1/random.php';
