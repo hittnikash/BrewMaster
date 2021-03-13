@@ -1,20 +1,22 @@
-const error = 'Error. There was a problem retrieving data. Status Code: ';
-const div = document.querySelector('#randomDiv');
-const btnTry = document.getElementById('btn');
+document.addEventListener("DOMContentLoaded", () => {
+  const error = "Error. There was a problem retrieving data. Status Code: ";
+  const div = document.querySelector("#randomDiv");
+  const btnTry = document.getElementById("btn");
 
-  btnTry.addEventListener('click', () => {
-      window.location.reload();
-  })
+  btnTry.addEventListener("click", () => {
+    window.location.reload();
+  });
 
-///fetch request/response/status
-  function randomCocktail() {                              
-  fetch(`https://www.thecocktaildb.com/api/json/v2/${api}/random.php`)
-    .then((response) => { response.json()                  
-    .then((data) => {displayRandomCocktail(data);    
-      if (response.status !== 200) {
-      console.log(`${error} response.status`);
-      return;
-    }                                 
+  ///fetch request/response/status
+  function randomCocktail() {
+    fetch(`https://www.thecocktaildb.com/api/json/v2/${api}/random.php`).then(
+      (response) => {
+        response.json().then((data) => {
+          displayRandomCocktail(data);
+          if (response.status !== 200) {
+            console.log(`${error} response.status`);
+            return;
+          }
         });
       }
     );
@@ -22,51 +24,48 @@ const btnTry = document.getElementById('btn');
   randomCocktail();
 
   ///create my elements/properties & values.
-  function createElement(elementName, property, value) {   
-      const element = document.createElement(elementName);
-      element[property] = value;
-      return element;
-      }
+  function createElement(elementName, property, value) {
+    const element = document.createElement(elementName);
+    element[property] = value;
+    return element;
+  }
 
- /// append my elements/properties & values.     
-  function appendElements(elementName, property, value) {      
-      const element = createElement(elementName, property, value);
-      div.appendChild(element); 
-      }
+  /// append my elements/properties & values.
+  function appendElements(elementName, property, value) {
+    const element = createElement(elementName, property, value);
+    div.appendChild(element);
+  }
 
-   /// display/ append drink name, and photo    
-  function displayRandomCocktail(cocktail) {                   
+  /// display/append drink name, and photo
+  function displayRandomCocktail(cocktail) {
     console.log(cocktail.drinks[0]);
-      appendElements('h3', 'innerHTML', `${cocktail.drinks[0].strDrink}`);
-      appendElements('img', 'src', `${cocktail.drinks[0].strDrinkThumb}`);
-          for(let i = 1; i < 16; i++) {                      /// loop through the ingredients to get rid of listed 'null'
-              console.log(i);                                /// & empty strings.
-              if(cocktail.drinks[0][`strIngredient${i}`]  === null || cocktail.drinks[0][`strIngredient${i}`] === '') {  
-                break;
-              } else if (cocktail.drinks[0][`strMeasure${i}`]  === null || cocktail.drinks[0][`strMeasure${i}`] === '') {  
-                break;
-              }
-      
-      appendElements('li', 'innerHTML', `${cocktail.drinks[0][`strMeasure${i}`] +': ' + cocktail.drinks[0][`strIngredient${i}`]}`);}  // measurements
-      appendElements('p', 'innerHTML', `${cocktail.drinks[0].strInstructions}`);}  //instructions
-      
- 
+    appendElements("h2", "innerHTML", `${cocktail.drinks[0].strDrink}`);
+    appendElements("img", "src", `${cocktail.drinks[0].strDrinkThumb}`);
 
-  ///-------------------2nd Request------------------------------------///
+    /// loop through the ingredients to get rid of listed 'null' & empty strings.
+    for (let i = 1; i < 16; i++) {
+      if (
+        cocktail.drinks[0][`strIngredient${i}`] === null ||
+        cocktail.drinks[0][`strIngredient${i}`] === ""
+      ) {
+        break;
+      } else if (
+        cocktail.drinks[0][`strMeasure${i}`] === null ||
+        cocktail.drinks[0][`strMeasure${i}`] === ""
+      ) {
+        break;
+      }
 
-// const urlSearch = 'https://www.thecocktaildb.com/api/json/v2/1/random.php';
-// const searchDiv = document.getElementById('searchDiv');
-
-//   function searchForDrink() {                              ///fetch request/response/status
-//   fetch()
-//     .then((response) => { response.json()                  
-//     .then((data) => {searchForDrink(data);    
-//       if (response.status !== 200) {
-//       console.log(`${error} response.status`);
-//       return;
-//     }                                 
-//         });
-//       }
-//     );
-//   }
-//   searchForDrink();
+      appendElements(
+        "li",
+        "innerHTML",
+        `${
+          cocktail.drinks[0][`strMeasure${i}`] +
+          ": " +
+          cocktail.drinks[0][`strIngredient${i}`]
+        }`
+      );
+    } // measurements
+    appendElements("p", "innerHTML", `${cocktail.drinks[0].strInstructions}`);
+  } //instructions
+});

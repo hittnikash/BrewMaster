@@ -1,75 +1,87 @@
 <!DOCTYPE html>
-<html lang= "en">
+<html lang="en">
+
 <head>
-    <meta charset= "utf-8"/>
-    <meta name= "viewport" content= "width=device-width, initial-scale=1"/>
-    <meta name= "description" content= "Brew Master, homebrewing application"/>
-    <meta name = "author" content= "Ashley Needy"/>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Brew Master, homebrewing application" />
+    <meta name="author" content="Ashley Needy" />
 
     <!-- TITLE -->
     <title>Brew Master</title>
 
-        <!--LINK TO CSS-->
-        <link rel= "stylesheet" href= "css/normalize.css">
-        <link rel= "stylesheet" href= "css/styles.css">
+    <!--LINK TO CSS-->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
-    <body>
-        <div class= "wrapper">
-            <header class= "container" role= "banner">
-                <nav role= "navigation">
-                <div class="topNav"> 
-                    <img class= "nav-logo" src="icons/w2.png" alt="njor logo"> 
-                    <button onclick="toggle()" class="hamburgerButton" aria-label="hamburger navigation menu" style= "background: url(icons/blackHamburger.svg)"></button></div>
+
+<body>
+    <div class="wrapper">
+        <header class="container" role="banner">
+            <nav role="navigation">
+                <div class="topNav">
+                    <img class="nav-logo" src="icons/w2.png" alt="njor logo">
+                    <button onclick="toggle()" class="hamburgerButton" aria-label="hamburger navigation menu"
+                        style="background: url(icons/blackHamburger.svg)"></button>
+                </div>
                 <div id="navLinks">
                     <a href="index.html">Home</a>
                     <a href="brews.html">Brews</a>
                     <a href="cocktails.html">Cocktails</a>
                     <a href="products.html">Products</a>
                     <a href="contact.html">Contact</a>
-                    </div> 
-                </nav>
-            </header>
-        <hr class= "navRule"> 
-          
-        <main class= "index-main">
+                </div>
+            </nav>
+        </header>
+        <hr class="navRule">
+
+        <main class="index-main">
             <div class="contentForm">
-                <form class="form" id= "form" action="#" method="post">
-                    <div><img class="home-image" src="images/njorMockup.jpg"  alt="njor beer styles"/></div> 
-                    <h2 class= "h2con">Contact Us!</h2>
-                        <fieldset>
-                            <legend><span class="number">1</span>Your Basic Info:</legend>
-                            <input required type="text" placeholder="First Name:" id="firstName" name="your_name">
-                            <span class="toolTip">Can only contain letters a-z</span>
+                <form class="form" id="form" action="#" method="post">
+                    <div><img class="home-image" src="images/beer/njorMockup.jpg" alt="njor beer styles" /></div>
+                    <h1>Contact Us!</h1>
+                    <fieldset>
+                        <legend><span class="number">1</span>Your Basic Info:</legend>
+                        <input required type="text" class="contactInput" placeholder="First Name:" id="firstName"
+                            name="your_first_name">
+                        <span class="toolTip">Can only contain letters a-z</span>
 
-                            <input required type="text" placeholder="Last Name:" id="lastName">
-                            <span class="toolTip">Can only contain letters a-z</span>
+                        <input required type="text" class="contactInput" placeholder="Last Name:" id="lastName"
+                            name="your_last_name">
+                        <span class="toolTip">Can only contain letters a-z</span>
 
-                            <input required type="email" placeholder="email:" id="email" name="your_email">
-                            <span class="toolTip">Must be a valid email address</span>
-                         </fieldset>
-            
-                       <fieldset>
-                            <legend><span class="number">2</span>Message:</legend>
-                            <textarea id="feedback" placeholder="Your Thoughts..." name="user_feedback"></textarea>
-                        </fieldset>
-                    <button class= "randomBtn" type="submit">Submit</button>
-               </form>
-            </main>
-            </div>
-            <footer class= "bigFoot" role= "contentinfo">
-             <!-- Social Media Icons -->
-             <hr class= "footerLine">
-                <ul class= "social-links">
-                    <li class="icons"><a href="https://www.facebook.com/KBBarrel/"><img src="icons/faceNovel.png" width="40px" height="40px" alt="facebook"/></a></li>
-                    <li class="icons"><a href="https://www.youtube.com/watch?v=caJzx6XWoOw"><img src="icons/youtubes.png" width="40px" height="40px" alt="Link to youtube"/></a></li>
-                    <li class="icons"><a href="https://twitter.com/lexbrewingco?lang=en"><img src="icons/tweeter.png" width="40px" height="40px" alt="Link to twitter"/></a></li>
-                    <li class="icons"><a href="https://www.instagram.com/lexingtonbrewingco/?hl=en"><img src="icons/insta.png" width="40px" height="40px" alt="Link to instagram"/></a></li>
-                </ul> 
-               <span class= "copyright">&copy; Brew Master 2021</span>
-            </footer>
-            
-         <!-- JS LINKS -->
-        <script src= "js/hamburger.js"></script>
-        <script src= "js/regex.js"></script> 
-    </body>
+                        <input required type="email" class="contactInput" placeholder="email:" id="email"
+                            name="your_email">
+                        <span class="toolTip">Must be a valid email address</span>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend><span class="number">2</span>Message:</legend>
+                        <textarea id="feedback" placeholder="Your Thoughts..." name="user_feedback"></textarea>
+                    </fieldset>
+                    <button class="randomBtn" type="submit">Submit</button>
+                </form>
+        </main>
+    </div>
+    <footer class="bigFoot" role="contentinfo">
+        <!-- Social Media Icons -->
+        <hr class="footerLine">
+        <ul class="social-links">
+            <li class="icons"><a href="https://www.facebook.com/KBBarrel/"><img src="icons/faceNovel.png" width="40px"
+                        height="40px" alt="facebook" /></a></li>
+            <li class="icons"><a href="https://www.youtube.com/watch?v=caJzx6XWoOw"><img src="icons/youtubes.png"
+                        width="40px" height="40px" alt="Link to youtube" /></a></li>
+            <li class="icons"><a href="https://twitter.com/lexbrewingco?lang=en"><img src="icons/tweeter.png"
+                        width="40px" height="40px" alt="Link to twitter" /></a></li>
+            <li class="icons"><a href="https://www.instagram.com/lexingtonbrewingco/?hl=en"><img src="icons/insta.png"
+                        width="40px" height="40px" alt="Link to instagram" /></a></li>
+        </ul>
+        <span class="copyright">&copy; Brew Master 2021</span>
+    </footer>
+
+    <!-- JS LINKS -->
+    <script src="js/hamburger.js"></script>
+    <script src="js/regex.js"></script>
+</body>
+
 </html>

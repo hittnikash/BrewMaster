@@ -2,7 +2,7 @@ const drop = document.getElementsByClassName("accordion");
 var i;
 
 for (i = 0; i < drop.length; i++) {
-  drop[i].addEventListener("click", function() {
+  drop[i].addEventListener("click", function () {
     this.classList.toggle("active");
 
     /* Toggles between hiding and showing the active panel */
@@ -14,5 +14,3 @@ for (i = 0; i < drop.length; i++) {
     }
   });
 }
-
-

@@ -1,77 +1,109 @@
 <!DOCTYPE html>
-    <html lang= "en">
-        <head>
-            <meta charset= "utf-8"/>
-            <meta name= "viewport" content= "width=device-width, initial-scale=1"/>
-            <meta name= "description" content= "Brew Master, homebrewing application"/>
-            <meta name = "author" content= "Ashley Needy"/>
+<html lang="en">
 
-            <!-- TITLE -->
-            <title>Brew Master</title>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Brew Master, homebrewing application" />
+    <meta name="author" content="Ashley Needy" />
 
-            <!--LINK TO CSS-->
-            <link rel= "stylesheet" href= "css/normalize.css">
-            <link rel= "stylesheet" href= "css/styles.css">
-        </head>
-    <body>
-        <div class= "wrapper">
-            <header class= "container" role= "banner">
-                <nav role= "navigation">
-                    <div class="topNav"> 
-                        <img class= "nav-logo" src="icons/w2.png" alt="njor logo"> 
-                        <button onclick="toggle()" class="hamburgerButton" aria-label="hamburger navigation menu" style= "background: url(icons/blackHamburger.svg)"></button></div>
-                      <!--Navigation-->    
-                        <div id="navLinks">
-                        <a href="index.html">Home</a>
-                        <a href="brews.html">Brews</a>
-                        <a href="cocktails.html">Cocktails</a>
-                        <a href="products.html">products</a>
-                        <a href="contact.html">Contact</a>
-                    </div> 
-                </nav>
-            </header>
-                <hr class= "navRule">
+    <!-- TITLE -->
+    <title>Brew Master</title>
+
+    <!--LINK TO CSS-->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="container" role="banner">
+            <nav role="navigation">
+                <div class="topNav">
+                    <img class="nav-logo" src="icons/w2.png" alt="njor logo">
+                    <button onclick="toggle()" class="hamburgerButton" aria-label="hamburger navigation menu"
+                        style="background: url(icons/blackHamburger.svg)"></button>
+                </div>
+                <!--Navigation-->
+                <div id="navLinks">
+                    <a href="index.html">Home</a>
+                    <a href="brews.html">Brews</a>
+                    <a href="cocktails.html">Cocktails</a>
+                    <a href="products.html">products</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+            </nav>
+        </header>
+        <hr class="navRule">
+        <div class="typo-cen">
+            <img class="typo-s" src="icons/crafttype.png" alt="brewers guide to crafting beer recipes">
             <!--Accordion Menu Options-->
-            <div class= "menu">
-            <button class="accordion">Brewing Methods</button>
-            <div class="panel">
-                <p>There are many ways to make beer at home. One way is called extract brewing. This method is simple and does not require much investment. Another method is called All Grain brewing.
-                This process is more complex, requires more investment and it gives the brewer much more control of over ther final product.</p>
-            </div>
-            <a href="extractProcess.html"><button class="accordion">Extract Brewing Process</button></a>
-            <div class="panel">
-            </div>
+            <div class="menu">
+                <button class="accordion">Brewing Methods</button>
+                <div class="panel">
+                    <p class="acc-p">There are many ways to make beer at home. One way is called extract brewing. This
+                        method is simple
+                        and does not require much investment. Another method is called All Grain brewing.
+                        This process is more complex, requires more investment and it gives the brewer much more control
+                        of
+                        over ther final product.</p>
 
-            <button class="accordion">All Grain Brewing Process</button>
-            <div class="panel">
-                <p>Check back later for more information!</p>
+                    <a href="extractProcess.html"><button class="accordion">Extract Brewing Process</button></a>
+                    <div class="panel">
+                    </div>
+
+                    <button class="accordion">All Grain Brewing Process</button>
+                    <div class="panel">
+                        <p class="acc-p">Check back later for more information!</p>
+                    </div>
+                </div>
+                <button class="accordion">Tools & Calculators</button>
+                <div class="panel">
+                    <h3>ABV Calculator</h3>
+                    <form>
+                        <fieldset id="ABV">
+                            <input required type="text" class="ABV-Input" id="startingGravity" name="starting_gravity"
+                                placeholder="SG:"></input>
+                            <span class="toolTip">Can only contain numbers 0-9</span>
+
+                            <input required type="text" class="ABV-Input" id="finalGravity" name="final_gravity"
+                                placeholder="FG:"></input>
+                            <span class="toolTip">Can only contain numbers 0-9</span>
+                            <button type="button" id="calc-ABV-btn">Get ABV</button>
+                        </fieldset>
+                        <p id="ABV_Result"></p>
+                    </form>
+                    <a href="glossary.html">
+                        <h3>Glossary</h3><br>
+                    </a>
+                </div>
             </div>
+            <main class="index-brew">
 
-            <button class="accordion">Tools</button>
-            <div class="panel">
-                <p>ABV Calculator</p>
-            </div>
-         </div>
-        <main class= "index-main">
+            </main>
 
-        </main>
-        <div id="results"></div>
 
-    </div>
-        <footer class= "bigFoot" role= "contentinfo">
-            <hr class= "footerLine">
+        </div>
+        <footer class="bigFoot" role="contentinfo">
+            <hr class="footerLine">
             <!-- Social Media Icons -->
-            <ul class= "social-links">
-                <li class="icons"><a href="https://www.facebook.com/KBBarrel/"><img src="icons/faceNovel.png" width="40px" height="40px" alt="facebook"/></a></li>
-                <li class="icons"><a href="https://www.youtube.com/watch?v=caJzx6XWoOw"><img src="icons/youtubes.png" width="40px" height="40px" alt="Link to youtube"/></a></li>
-                <li class="icons"><a href="https://twitter.com/lexbrewingco?lang=en"><img src="icons/tweeter.png" width="40px" height="40px" alt="Link to twitter"/></a></li>
-                <li class="icons"><a href="https://www.instagram.com/lexingtonbrewingco/?hl=en"><img src="icons/insta.png" width="40px" height="40px" alt="Link to instagram"/></a></li>
-            </ul> 
-                <span class= "copyright">&copy; Brew Master 2021</span>
-            </footer>
+            <ul class="social-links">
+                <li class="icons"><a href="https://www.facebook.com/KBBarrel/"><img src="icons/faceNovel.png"
+                            width="40px" height="40px" alt="facebook" /></a></li>
+                <li class="icons"><a href="https://www.youtube.com/watch?v=caJzx6XWoOw"><img src="icons/youtubes.png"
+                            width="40px" height="40px" alt="Link to youtube" /></a></li>
+                <li class="icons"><a href="https://twitter.com/lexbrewingco?lang=en"><img src="icons/tweeter.png"
+                            width="40px" height="40px" alt="Link to twitter" /></a></li>
+                <li class="icons"><a href="https://www.instagram.com/lexingtonbrewingco/?hl=en"><img
+                            src="icons/insta.png" width="40px" height="40px" alt="Link to instagram" /></a></li>
+            </ul>
+            <span class="copyright">&copy; Brew Master 2021</span>
+        </footer>
         <!-- JS LINKS -->
-        <script src= "js/hamburger.js"></script>
-        <script src= "js/beers.js"></script>
-        <script src= "js/accordian.js"></script>
-    </body>
+        <script src="js/hamburger.js"></script>
+        <script src="js/beers.js"></script>
+        <script src="js/accordian.js"></script>
+        <script src="js/ABV_calc.js"></script>
+</body>
+
 </html>

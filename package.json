@@ -1,0 +1,27 @@
+{
+  "name": "brewmaster",
+  "version": "1.0.0",
+  "description": "homebrewing app",
+  "main": "index.html",
+  "scripts": {
+    "start": "node glossary.js"
+  },
+
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hittnikash/BrewMaster.git"
+  },
+  "keywords": [
+    "homebrewing",
+    "cocktails"
+  ],
+  "author": "ashley needy",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hittnikash/BrewMaster/issues"
+  },
+  "homepage": "https://github.com/hittnikash/BrewMaster#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
