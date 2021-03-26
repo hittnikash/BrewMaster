@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="Brew Master, homebrewing application" />
     <meta name="author" content="Ashley Needy" />
+ 
 
     <!-- TITLE -->
     <title>Brew Master</title>
@@ -20,7 +21,8 @@
         <header class="container" role="banner">
             <nav role="navigation">
                 <div class="topNav">
-                    <img class="nav-logo" src="icons/w2.png" alt="njor logo">
+                    <img class="nav-logo" src="icons/njorLogo.png" alt="njor logo">
+                    <img class="brandName" src="icons/njorLogoWname.png" alt="njor brand name">
                     <button onclick="toggle()" class="hamburgerButton" aria-label="hamburger navigation menu"
                         style="background: url(icons/blackHamburger.svg)"></button>
                 </div>
@@ -36,24 +38,19 @@
         <hr class="navRule">
 
         <main class="index-main">
-            <h1 class="index-displayTxt1">– Njor BrewMaster –</h1>
-            <div><img class="home-image" src="" alt="" title="" /></div>
-            <h2 class="index-displayTxt2">HomeBrewing</h2>
-            <h3 class="index-displayTxt3">Glossary</h3>
-            <div class="glossary">
-
-            </div>
-
-
-
-
+            <!-- <h1>HomeBrewing Glossary</h1><br> -->
+            <img class="typo" src="icons/brewTermTypo.png" alt="Brewers guide to understanding Brewing terminology"><br>
+   
+            <div id="glossaryDiv"></div>
+         
+           
         </main>
     </div>
     <footer class="bigFoot" role="contentinfo">
         <hr class="footerLine">
         <!-- Social Media Icons -->
         <ul class="social-links">
-            <li class="icons"><a href="https://www.facebook.com/LexingtonBrewingCo"><img src="icons/faceNovel.png"
+            <li class="icons"><a href="https://www.facebook.com/LexingtonBrewingCo"><img src="icons/face-novel.png"
                         width="40px" height="40px" alt="facebook" /></a></li>
             <li class="icons"><a href="https://www.youtube.com/watch?v=caJzx6XWoOw"><img src="icons/youtubes.png"
                         width="40px" height="40px" alt="Link to youtube" /></a></li>
@@ -61,13 +58,16 @@
                         height="40px" alt="Link to twitter" /></a></li>
             <li class="icons"><a href="https://www.instagram.com/lexingtonbrewingco/?hl=en"><img src="icons/insta.png"
                         width="40px" height="40px" alt="Link to instagram" /></a></li>
-        </ul>
+            <li class="icons"><a href="https://www.brewersassociation.org/independent-craft-brewer-seal/?gclid=Cj0KCQjwutaCBhDfARIsAJHWnHuCL6llOAHyJspnHhyL33e3H34HruoCan0U73F2itrGSGqdw6Wsw4IaArHFEALw_wcB"><img src="icons/linkedIn.png"
+                width="40px" height="40px" alt="Link to instagram" /></a></li>
+            </ul>
         <span class="copyright">&copy; Brew Master 2021</span>
     </footer>
 
     <!-- JS LINKS -->
     <script src="js/hamburger.js"></script>
     <script src="js/glossary.js"></script>
+    
 </body>
 
 </html>

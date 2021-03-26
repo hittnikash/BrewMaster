@@ -1,5 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   const content = document.querySelector("main");
+  
+
   const cartArr = [];
 
   for (let i = 0; i < products.length; i++) {
@@ -10,29 +12,71 @@ document.addEventListener("DOMContentLoaded", () => {
    <div class= "produ">
    <h2 class= "apparel"> ${product.apparelType} | ${product.productID}</h2>
     <img class = "productImg" src="${product.image}" alt="${product.apparelType}"> 
-    <p class= "description"> ${product.description}</p>
+    <section class= "description"><p> ${product.description}</p></section>
     <h3 class= "price"> ${product.price}</h3>
-    <div class="btnDiv"><button type= "button" value= "${product.productID}" id="btnPro">Add</button> 
-    <button type= "button" value= "${product.productID}"id="btnProRem">Remove</button></div><br>   
+    <div class="btnDiv"><button type= "button" value= "${product.price}" id="btnPro">Add</button> 
+    <button type= "button" value= "${product.price}"id="btnProRem">Remove</button></div><br>   
    </div>
     `;
-
+    
     content.appendChild(addProduct);
-  }
 
+     /// LIGHTBOX ///
+ const lightbox = document.createElement('div');
+ lightbox.id = 'lightbox';
+ document.body.appendChild(lightbox);
+ 
+ /// To click on an image ///
+ const images = document.querySelectorAll('img');
+ 
+ images.forEach(image => {
+     image.addEventListener('click', e => {
+         lightbox.classList.add('active');
+         const img = document.createElement('img');
+         img.src = image.src;
+ 
+  /// To remove the xtra images from lightbox ///
+         while (lightbox.firstChild) {
+             lightbox.removeChild(lightbox.firstChild);
+         }
+          lightbox.appendChild(img);
+     });
+ });
+ 
+ /// To click off an image and hide the lightbox ///
+ lightbox.addEventListener('click', e => {
+     if (e.target !== e.currentTarget) return;
+     lightbox.classList.remove('active');
+    //  window.location.reload();
+     
+   });
+ }
+
+//  Add & Remove to cart
   content.addEventListener("click", (e) => {
     e.preventDefault();
     const button = e.target;
     const action = button.textContent;
     const item = e.target.value;
+
     if (action === "Add" && cartArr.find((i) => i === item) == null) {
       cartArr.push(item);
       console.log(cartArr);
-    } else if (action === "Remove") {
-      const filtered = cartArr.filter((i) => i !== item);
-      {
-        console.log(filtered);
+
+    } else if (action === "Remove" && cartArr.find((i) => i !== item)) {
+      cartArr.pop(item);
+      console.log(cartArr);  
       }
+      // function addTotal(i) {
+      // const stringToNums = cartArr.map(i => parseFloat(i));
+      // console.log(stringToNums);
+      //   const totalArr = stringToNums.reduce((sum, stringToNum) => sum += stringToNum, 0);
+      //   console.log(totalArr);
+      // }
     }
-  });
+  );
 });
+
+
+ 
+

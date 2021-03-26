@@ -1,3 +1,4 @@
+
 const siGravity = document.getElementById("startingGravity");
 const fiGravity = document.getElementById("finalGravity");
 const calcResult = document.getElementById("ABV_Result");
@@ -30,6 +31,7 @@ function createListener(validator) {
     const showTip = text !== "" && !valid;
     const tooltip = e.target.nextElementSibling;
     showOrHideTip(showTip, tooltip);
+   
   };
 }
 /* Event Listeners */

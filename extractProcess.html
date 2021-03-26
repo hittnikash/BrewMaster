@@ -20,7 +20,8 @@
         <header class="container" role="banner">
             <nav role="navigation">
                 <div class="topNav">
-                    <img class="nav-logo" src="icons/w2.png" alt="njor logo">
+                    <img class="nav-logo" src="icons/njorLogo.png" alt="njor logo">
+                    <img class="brandName" src="icons/njorLogoWname.png" alt="njor brand name">
                     <button onclick="toggle()" class="hamburgerButton" aria-label="hamburger navigation menu"
                         style="background: url(icons/blackHamburger.svg)"></button>
                 </div>
@@ -34,157 +35,170 @@
             </nav>
         </header>
         <hr class="navRule">
-        <main class="index-main">
-
+        <main class="index-extract">
             <img class="typo" src="icons/extracttypo.png" alt="brewers guide to bomebrewing">
-            <img class="home-image" src="images/processImg/equipment.png" alt="homebrewing equipment"
-                title="homebrewing equipment" />
-            <div class="centerList">
-                <h2>Necessary Equipment</h2>
-                <p>Below is a list of items that will be necessary to begin your homebrewing journey. There are,
-                    however, two items on the list below that are optional. The tilt digital hydrometer is a
-                    bluetooth hydrometer that you can leave in your beer during the fermentation process. With the Tilt
-                    Application you are able to access and record these measurements. This enables you you take
-                    fewer samples, reducing the risk of possible contamination, and over oxygenating your beer. As
-                    an added bonus it also means more beer saved to enjoy later with friends.</p>
 
-                <p>The other handy item is the wort chiller. This is nice to have -becasue it rapidly cools down
-                    your wort once you have terminated the boil. This reduces the amount of 'air-time' your wort
-                    receives between cooling and pitching, which in turn reduces the risk of possible contaimination.
-                    Aside from those reasons it really does cool your wort down so much faster than ice baths alone,
-                    so its a nice piece of equipment that speeds up production.</p>
+            <section class="ImageToList">
+                <img onclick="imgListToggle()" id="ex-image" class= "ex-image" src="images/processImg/equipment.jpg"
+                    alt="homebrewing equipment" title="click to view list of necessary homebrewing equipment." />
+                <div class=" centerList centerList--hidden">
+                    <div class="contents"><br>
+                        <ul class="equip">
+                            <h3>Necessary Equipment</h3><br>
+                            <li>5-Gallon Brew Bucket</li>
+                            <li>5-Gallon Glass Carboy</li>
+                            <li>5-Gallon Stainless Pot/ Brew Kettle</li>
+                            <li>Thermometer (standard/ digital)</li>
+                            <li>Sanitizer & cleanser</li>
+                            <li>Tilt digital hydrometer/ Hydrometer</li>
+                            <li>bottle capper/ kegging setup</li>
+                            <li>long-handled stainless-steel spoon</li>
+                            <li>Hoses & Siphon with clamp</li>
+                            <li>Wort Chiller</li>
+                            <li>Airlocks</li>
+                        </ul>
+                    </div>
+                </div>
+                </section>
+    <article class="article-extract">
+        <p class="ex-p">If you want to view a list of items that will be necessary to begin your homebrewing journey
+            click on the image above. There are,
+            however, two items on the list that are optional. The tilt digital hydrometer is a
+            bluetooth hydrometer that you can leave in your beer during the fermentation process. With the Tilt
+            Application you are able to access and record these measurements. This enables you you take
+            fewer samples, reducing the risk of possible contamination, and over oxygenating your beer. As
+            an added bonus it also means more beer saved to enjoy later with friends.</p>
 
-                <ul class="equip">
-                    <li>5-Gallon Brew Bucket</li>
-                    <li>5-Gallon Glass Carboy</li>
-                    <li>5-Gallon Stainless Pot/ Brew Kettle</li>
-                    <li>Thermometer (standard/ digital)</li>
-                    <li>Sanitizer & cleanser</li>
-                    <li>Tilt digital hydrometer/ Hydrometer</li>
-                    <li>bottle capper/ kegging setup</li>
-                    <li>long-handled stainless-steel spoon</li>
-                    <li>Hoses & Siphon with clamp</li>
-                    <li>Wort Chiller</li>
-                    <li>Airlocks</li>
-                </ul>
-            </div>
-            <h2>The Brewing Process</h2>
-            <p>Below is the process for extract brewing. The process is generic and fairly simple. Keep in mind
-                depending upon the recipe and the style your malt and hop additions and fermentation times may vary.
-            </P>
+        <p class="ex-p">The other handy item is the wort chiller. This is nice to have -becasue it rapidly cools down
+            your wort once you have terminated the boil. This reduces the amount of 'air-time' your wort
+            receives between cooling and pitching, which in turn reduces the risk of possible contaimination.
+            Aside from those reasons it really does cool your wort down so much faster than ice baths alone,
+            so its a nice piece of equipment that speeds up production.</p>
+    </article>
 
-            <h4>SANITIZE:</h4>
-            <p>Thoroughly clean & sanitize all of your brewing equipment and utensils that
-                will come into contact with any ingredients.</p>
+<article class="article-extract">
+    <h2>The Brewing Process</h2>
+    <p class="ex-p">Below is the process for extract brewing. The process is generic and fairly simple. Keep in mind
+        depending upon the recipe and the style your malt and hop additions and fermentation times may vary.
+    </P>
 
-            <h4>STEEP GRAINS:</h4>
-            <p>Pour 2.5 gallons of clean water into your brew kettle and begin to
-                heat. When the temperature is between (150-165 degrees F) pour the crushed grains into the grain bag
-                and tie a loose knot at the top of the bag. Steep the bag for twenty minutes- be careful not to
-                allow your steeping water to exceed 170 degrees, which leeches tannis into the wort. Remove the
-                grain bag without squeezing. Your water is now wort.</p>
-            <img class="home-image" src="images/processImg/steepGrains.jpg" alt="grains steeping"
-                title="grains steeping" />
+    <h4>SANITIZE:</h4>
+    <p class="ex-p">Thoroughly clean & sanitize all of your brewing equipment and utensils that
+        will come into contact with any ingredients.</p>
 
-            <h4>BOIL:</h4>
-            <p>Bring your wort to a gentle rolling boil, add Liquid Malt Extract. Continuously
-                stir the extract into the wort so that it does not carmelize at the bottom of your kettle.</p>
-            <img class="home-image" src="images/processImg/wort.jpg" alt="wort" title="wort" />
+    <h4>STEEP GRAINS:</h4>
+    <p class="ex-p">Pour 2.5 gallons of clean water into your brew kettle and begin to
+        heat. When the temperature is between (150-165 degrees F) pour the crushed grains into the grain bag
+        and tie a loose knot at the top of the bag. Steep the bag for twenty minutes- be careful not to
+        allow your steeping water to exceed 170 degrees, which leeches tannis into the wort. Remove the
+        grain bag without squeezing. Your water is now wort.</p>
+    <div class= "box"><img class="ex-image" src="images/processImg/steepGrains.jpg" alt="grains steeping" title="grains steeping"/></div>
 
-            <h4>BITTERING HOPS:</h4>
-            <p>Add hops and boil for 40 minutes. (Bittering hops add hop flavors.)</p>
+    <h4>BOIL:</h4>
+    <p class="ex-p">Bring your wort to a gentle rolling boil, add Liquid Malt Extract. Continuously
+        stir the extract into the wort so that it does not carmelize at the bottom of your kettle.</p>
+        <div class= "box"><img class="ex-image" src="images/processImg/wort.jpg" alt="wort" title="wort"/></div>
 
-            <h4>AROMA SCHEDULE:</h4>
-            <p>Next add the next pack of hops and boil for 5 minutes. (Aroma hops add a nice aroma to your brew.)</p>
-            <img class="home-image" src="images/processImg/hops.jpg" alt="hop additions" title="hop pellets" />
+    <h4>BITTERING HOPS:</h4>
+    <p class="ex-p">Add hops and boil for 40 minutes. (Bittering hops add hop flavors.)</p>
 
-            <h4>DRY MALT:</h4>
-            <p>Add the Dry Malt Extract, and let boil for 5 minutes.</p>
-            <img class="home-image" src="images/processImg/ingredients.jpg" alt="ingredients" title="ingredients" />
+    <h4>AROMA SCHEDULE:</h4>
+    <p class="ex-p">Next add the next pack of hops and boil for 5 minutes. (Aroma hops add a nice aroma to your brew.)
+    </p>
+    <div class= "box"><img class="ex-image" src="images/processImg/hops.jpg" alt="hop additions" title="hop pellets"/></div>
 
-            <h4>AROMA HOPS:</h4>
-            <p>Add the final pack hops and let boil for 10 minutes.</p>
+    <h4>DRY MALT:</h4>
+    <p class="ex-p">Add the Dry Malt Extract, and let boil for 5 minutes.</p>
+    <div class= "box"><img class="ex-image" src="images/processImg/ingredients.jpg" alt="ingredients" title="ingredients"/></div>
 
-            <h4>TERMINATE BOIL:</h4>
-            <p>You want to cool your wort rapidly to avoid contamination. If you
-                have a wort chiller it should be clean and sanitized before use. If you do not have a wort chiller
-                you can use an icebath. You want to bring the temperature down to 60 degrees, that is a healthy temp
-                for your yeast to thrive but it will also give you an accurate hydrometer reading.</p>
+    <h4>AROMA HOPS:</h4>
+    <p class="ex-p">Add the final pack hops and let boil for 10 minutes.</p>
 
-            <h4>ADD WATER:</h4>
-            <p>Gently pour your wort to your primary fermenter. Then add enough clean
-                water to bring yur volume up to 5 gallons. Thoroughly stir and then take a sample for your
-                hydrometer reading. Make sure to record this number.</p>
+    <h4>TERMINATE BOIL:</h4>
+    <p class="ex-p">You want to cool your wort rapidly to avoid contamination. If you
+        have a wort chiller it should be clean and sanitized before use. If you do not have a wort chiller
+        you can use an icebath. You want to bring the temperature down to 60 degrees, that is a healthy temp
+        for your yeast to thrive but it will also give you an accurate hydrometer reading.</p>
 
-            <h4>PITCH YEAST:</h4>
-            <p>Now you can sprinkle the yeast over the surface of your wort, gently
-                stir and then secure the lid on you fermentation bucket. Fill your airlock to the water line and
-                gently twist it into the grommit in the lid. Move the fermenter to a temperature-stable area between
-                (53-59 degrees F).</p>
-            <img class="home-image" src="images/processImg/yeasty.jpg" alt="add yeast" title="add yeast" />
+    <h4>ADD WATER:</h4>
+    <p class="ex-p">Gently pour your wort to your primary fermenter. Then add enough clean
+        water to bring yur volume up to 5 gallons. Thoroughly stir and then take a sample for your
+        hydrometer reading. Make sure to record this number.</p>
 
-            <h4>PRIMARY FERMENTATION:</h4>
-            <p>The wort will begin to ferment within 48 hours and you will
-                notice co2 releasing out of the airlock. You should monitor the airlock for co2 release and take
-                samples when it begins to slow down. Keep in mind different styles may require different
-                fermentation times, see recipes, for guidelines. Any speciality ingredients or additives like barrel
-                chips, or flavorings can be added during primary or secondary fermentation.</p>
-            <img class="home-image" src="images/processImg/primary.jpg" alt="primary fermentation"
-                title="primary fermentation" />
+    <h4>PITCH YEAST:</h4>
+    <p class="ex-p">Now you can sprinkle the yeast over the surface of your wort, gently
+        stir and then secure the lid on you fermentation bucket. Fill your airlock to the water line and
+        gently twist it into the grommit in the lid. Move the fermenter to a temperature-stable area between
+        (53-59 degrees F).</p>
+        <div class= "box"><img class="ex-image" src="images/processImg/yeasty.jpg" alt="add yeast" title="add yeast"/></div>
 
-            <h4>SECONDARY FERMENTATION:</h4>
-            <p>When the gravity remiains the same for two full days transfer
-                your beer to a clean sanitized 5- gallon carboy. If you are using a top-feeding yeast (ale yeast)
-                you should continue to monitor your brew & again follow guidelines for secondary fermentation. If
-                you are using a bottom feeding yeast (lager yeast) Lower the temp 1 to 3 degrees per day until it
-                reaches (35- 42 degrees F). Lager within this temperature range 3-4 weeks.</p>
-            <img class="home-image" src="images/processImg/secondary.jpg" alt="secondary fermentation"
-                title="secondary fermentation" />
+    <h4>PRIMARY FERMENTATION:</h4>
+    <p class="ex-p">The wort will begin to ferment within 48 hours and you will
+        notice co2 releasing out of the airlock. You should monitor the airlock for co2 release and take
+        samples when it begins to slow down. Keep in mind different styles may require different
+        fermentation times, see recipes, for guidelines. Any speciality ingredients or additives like barrel
+        chips, or flavorings can be added during primary or secondary fermentation.</p>
+        <div class= "box"><img class="ex-image" src="images/processImg/primary.jpg" alt="primary fermentation" title="primary fermentation"/></div>
 
-            <h4>NEXT STEPS:</h4>
-            <p>Now its either kegging or bottiling day. So you need to get your
-                hydrometer and take a final gravity and record this number. You can do the calculation, (OG-FG)*
-                131.25 = ABV% or use an ABV calculator to find the alcohol percentage.</p>
-            <img class="home-image" src="images/processImg/hydrometer.jpg" alt="final gravity reading"
-                title="final gravity reading" />
+    <h4>SECONDARY FERMENTATION:</h4>
+    <p class="ex-p">When the gravity remiains the same for two full days transfer
+        your beer to a clean sanitized 5- gallon carboy. If you are using a top-feeding yeast (ale yeast)
+        you should continue to monitor your brew & again follow guidelines for secondary fermentation. If
+        you are using a bottom feeding yeast (lager yeast) Lower the temp 1 to 3 degrees per day until it
+        reaches (35- 42 degrees F). Lager within this temperature range 3-4 weeks.</p>
+        <div class= "box"><img class="ex-image" src="images/processImg/secondary.jpg" alt="secondary fermentation"
+        title="secondary fermentation"/></div>
 
-            <h4>TO BOTTLE:</h4>
-            <p>If you have chosen to bottle you will need to make sure all of your
-                bottles and caps are clean and sanitized. In a small pan dissolve 5 oz of priming sugar into 2 cups
-                of boiling water. Carefully pour this mixture into your beer and stir gently, avoiding the bottom
-                which could have 3-4 inches of sediment. Begin siphoning beer into bottles, leaving 1 inch of head
-                space and cap.</p>
-            <img class="home-image" src="images/processImg/keg.jpg" alt="kegs" title="kegs" />
+    <h4>NEXT STEPS:</h4>
+    <p class="ex-p">Now its either kegging or bottiling day. So you need to get your
+        hydrometer and take a final gravity and record this number. You can do the calculation, (OG-FG)*
+        131.25 = ABV% or use an ABV calculator to find the alcohol percentage.</p>
+        <div class= "box"><img class="ex-image" src="images/processImg/hydrometer.jpg" alt="final gravity reading"
+        title="final gravity reading"/></div>
 
-            <h4>TO KEG:</h4>
-            <p>There are several kegging methods out here, after testing different
-                practices, this is what we have found works best. Siphon your beer into a clean, sanitized keg, and
-                fill keg with co2. Inspect kegs for any leaks that may occur. Gently rock keg and then purge. Refill
-                keg with co2 and let sit overnight. The following day store keg in your your setup, and hook up your
-                co2 line. Co2 infuses into your beer faster at colder temperatures. Allow your keg to sit at about
-                10-15 psi for about a week but dont forget to monitor your regulator. When its time to serve turn
-                the psi down to about 7.</p>
-            <img class="home-image" src="images/processImg/pouringBeer.gif" alt="kegs" title="kegs" />
-    </div>
+    <h4>TO BOTTLE:</h4>
+    <p class="ex-p">If you have chosen to bottle you will need to make sure all of your
+        bottles and caps are clean and sanitized. In a small pan dissolve 5 oz of priming sugar into 2 cups
+        of boiling water. Carefully pour this mixture into your beer and stir gently, avoiding the bottom
+        which could have 3-4 inches of sediment. Begin siphoning beer into bottles, leaving 1 inch of head
+        space and cap.</p>
+        <div class= "box"><img class="ex-image" src="images/processImg/keg.jpg" alt="kegs" title="kegs"/></div>
+
+    <h4>TO KEG:</h4>
+    <p class="ex-p">There are several kegging methods out here, after testing different
+        practices, this is what we have found works best. Siphon your beer into a clean, sanitized keg, and
+        fill keg with co2. Inspect kegs for any leaks that may occur. Gently rock keg and then purge. Refill
+        keg with co2 and let sit overnight. The following day store keg in your your setup, and hook up your
+        co2 line. Co2 infuses into your beer faster at colder temperatures. Allow your keg to sit at about
+        10-15 psi for about a week but dont forget to monitor your regulator. When its time to serve turn
+        the psi down to about 7.</p>
+    </article>
+        <div class= "box"><img class="ex-image" src="images/processImg/pouringBeer.gif" alt="kegs" title="kegs"/><br></div>
+    <a href="brews.html"><button class="randomBtn" type="button">Return to Brews</button></a>
+   
     </main>
     </div>
     <footer class="bigFoot" role="contentinfo">
         <hr class="footerLine">
         <!-- Social Media Icons -->
         <ul class="social-links">
-            <li class="icons"><a href="https://www.facebook.com/KBBarrel/"><img src="icons/faceNovel.png" width="40px"
-                        height="40px" alt="facebook" /></a></li>
+            <li class="icons"><a href="https://www.facebook.com/LexingtonBrewingCo"><img src="icons/face-novel.png"
+                        width="40px" height="40px" alt="facebook" /></a></li>
             <li class="icons"><a href="https://www.youtube.com/watch?v=caJzx6XWoOw"><img src="icons/youtubes.png"
                         width="40px" height="40px" alt="Link to youtube" /></a></li>
-            <li class="icons"><a href="https://twitter.com/lexbrewingco?lang=en"><img src="icons/tweeter.png"
-                        width="40px" height="40px" alt="Link to twitter" /></a></li>
+            <li class="icons"><a href="https://twitter.com/EinstokBeer"><img src="icons/tweeter.png" width="40px"
+                        height="40px" alt="Link to twitter" /></a></li>
             <li class="icons"><a href="https://www.instagram.com/lexingtonbrewingco/?hl=en"><img src="icons/insta.png"
                         width="40px" height="40px" alt="Link to instagram" /></a></li>
+            <li class="icons"><a
+                    href="https://www.brewersassociation.org/independent-craft-brewer-seal/?gclid=Cj0KCQjwutaCBhDfARIsAJHWnHuCL6llOAHyJspnHhyL33e3H34HruoCan0U73F2itrGSGqdw6Wsw4IaArHFEALw_wcB"><img
+                        src="icons/linkedIn.png" width="40px" height="40px" alt="Link to instagram" /></a></li>
         </ul>
         <span class="copyright">&copy; Brew Master 2021</span>
     </footer>
     <!-- JS LINKS -->
     <script src="js/hamburger.js"></script>
+    <script src="js/extractList.js"></script>
 </body>
 
 </html>

@@ -1,3 +1,4 @@
+
 const drop = document.getElementsByClassName("accordion");
 var i;
 

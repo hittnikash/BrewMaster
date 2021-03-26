@@ -20,7 +20,8 @@
         <header class="container" role="banner">
             <nav role="navigation">
                 <div class="topNav">
-                    <img class="nav-logo" src="icons/w2.png" alt="njor logo">
+                    <img class="nav-logo" src="icons/njorLogo.png" alt="njor logo">
+                    <img class="brandName" src="icons/njorLogoWname.png" alt="njor brand name">
                     <button onclick="toggle()" class="hamburgerButton" aria-label="hamburger navigation menu"
                         style="background: url(icons/blackHamburger.svg)"></button>
                 </div>
@@ -34,11 +35,19 @@
             </nav>
         </header>
         <hr class="navRule">
-
         <main class="index-main">
+            <div class="conSection">
+                <img class="con-image" src="images/beer/breweryDude.jpg" alt="brewery guy pouring beer"/>
+                   <article class="con-text">
+                    <p> Njör is a microbrewery created by craft beer enthusiasts for craft beer enthusiasts. This
+                        Scandinavian-based microbrewery got its name from Njöror, a Norse God of seafaring and crop
+                        fertility. At its roots, Njör is committed to handcrafting flavorful brews with quality
+                        ingredients and thoughtful recipes.</p>
+                    </article>
+            </div>
+              <hr>
             <div class="contentForm">
                 <form class="form" id="form" action="#" method="post">
-                    <div><img class="home-image" src="images/beer/njorMockup.jpg" alt="njor beer styles" /></div>
                     <h1>Contact Us!</h1>
                     <fieldset>
                         <legend><span class="number">1</span>Your Basic Info:</legend>
@@ -61,27 +70,31 @@
                     </fieldset>
                     <button class="randomBtn" type="submit">Submit</button>
                 </form>
+            </div>
         </main>
-    </div>
-    <footer class="bigFoot" role="contentinfo">
-        <!-- Social Media Icons -->
-        <hr class="footerLine">
-        <ul class="social-links">
-            <li class="icons"><a href="https://www.facebook.com/KBBarrel/"><img src="icons/faceNovel.png" width="40px"
-                        height="40px" alt="facebook" /></a></li>
-            <li class="icons"><a href="https://www.youtube.com/watch?v=caJzx6XWoOw"><img src="icons/youtubes.png"
-                        width="40px" height="40px" alt="Link to youtube" /></a></li>
-            <li class="icons"><a href="https://twitter.com/lexbrewingco?lang=en"><img src="icons/tweeter.png"
-                        width="40px" height="40px" alt="Link to twitter" /></a></li>
-            <li class="icons"><a href="https://www.instagram.com/lexingtonbrewingco/?hl=en"><img src="icons/insta.png"
-                        width="40px" height="40px" alt="Link to instagram" /></a></li>
-        </ul>
-        <span class="copyright">&copy; Brew Master 2021</span>
-    </footer>
+        </div>
+        <footer class="bigFoot" role="contentinfo">
+            <!-- Social Media Icons -->
+            <hr class="footerLine">
+            <ul class="social-links">
+                <li class="icons"><a href="https://www.facebook.com/LexingtonBrewingCo"><img src="icons/face-novel.png"
+                            width="40px" height="40px" alt="facebook" /></a></li>
+                <li class="icons"><a href="https://www.youtube.com/watch?v=caJzx6XWoOw"><img src="icons/youtubes.png"
+                            width="40px" height="40px" alt="Link to youtube" /></a></li>
+                <li class="icons"><a href="https://twitter.com/EinstokBeer"><img src="icons/tweeter.png" width="40px"
+                            height="40px" alt="Link to twitter" /></a></li>
+                <li class="icons"><a href="https://www.instagram.com/lexingtonbrewingco/?hl=en"><img
+                            src="icons/insta.png" width="40px" height="40px" alt="Link to instagram" /></a></li>
+                <li class="icons"><a
+                        href="https://www.brewersassociation.org/independent-craft-brewer-seal/?gclid=Cj0KCQjwutaCBhDfARIsAJHWnHuCL6llOAHyJspnHhyL33e3H34HruoCan0U73F2itrGSGqdw6Wsw4IaArHFEALw_wcB"><img
+                            src="icons/linkedIn.png" width="40px" height="40px" alt="Link to instagram" /></a></li>
+            </ul>
+            <span class="copyright">&copy; Brew Master 2021</span>
+        </footer>
 
-    <!-- JS LINKS -->
-    <script src="js/hamburger.js"></script>
-    <script src="js/regex.js"></script>
+        <!-- JS LINKS -->
+        <script src="js/hamburger.js"></script>
+        <script src="js/regex.js"></script>
 </body>
 
 </html>

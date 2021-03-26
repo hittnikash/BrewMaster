@@ -1,37 +1,38 @@
 @charset "UTF-8";
 
 /*--------------------------------------------
-           BASE STYLES (MOBILE-FIRST)
+BASE STYLES (MOBILE-FIRST)
 --------------------------------------------*/
 * {
   box-sizing: border-box;
-}
+  }
 
 /***** BASIC TEXT STYLES ******/
 @font-face {
   font-family: "HackneyPersonalUseOnly";
   src: url("../font/HackneyPersonalUseOnly.eot");
   src: url("../font/HackneyPersonalUseOnly.eot?#iefix")
-      format("embedded-opentype"),
-    url("../font/HackneyPersonalUseOnly.svg#HackneyPersonalUseOnly")
-      format("svg"),
-    url("../font/HackneyPersonalUseOnly.ttf") format("truetype"),
-    url("../font/HackneyPersonalUseOnly.woff") format("woff"),
-    url("../font/HackneyPersonalUseOnly.woff2") format("woff2");
+  format("embedded-opentype"),
+  url("../font/HackneyPersonalUseOnly.svg#HackneyPersonalUseOnly")
+  format("svg"),
+  url("../font/HackneyPersonalUseOnly.ttf") format("truetype"),
+  url("../font/HackneyPersonalUseOnly.woff") format("woff"),
+  url("../font/HackneyPersonalUseOnly.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
   font-display: fallback;
-}
+  }
 
 p {
   font-family: "Montserrat subheading", "Verdana", "sans-serif";
-  line-height: 30px;
+  line-height: 35px;
+  font-size: 1rem;
   color: #000;
   flex: 1 1 auto;
   width: 100%;
   padding: 3%;
   max-width: 305px;
-}
+  }
 
 h1,
 h2,
@@ -41,55 +42,63 @@ h5,
 h6 {
   font-family: "HackneyPersonalUseOnly", "Bebas Neue", "Impact", "sans-serif";
   text-transform: uppercase;
-}
+  }
 
 h1 {
   letter-spacing: 1px;
-  font-size: 1.8rem;
+  font-size: 1.9rem;
   color: #08343c;
   text-align: center;
-}
+  }
 
 h2 {
   font-size: 1.5rem;
   color: #3c0808;
   text-align: center;
-}
+  }
 
 h3 {
   font-size: 1.5rem;
   color: #3c0808;
-}
+  }
 
 h4 {
   text-align: left;
   font-size: 1.5rem;
-  margin-left: 5%;
-  margin-top: 5%;
-  margin-bottom: -5%;
-}
+  }
 
 h5 {
   display: inline-flex;
-  font-size: 1.2rem;
-}
+  font-size: 1.4rem;
+  }
 
 h6 {
   display: inline-flex;
   font-size: 1.5rem;
   color: #08343c;
-}
+  }
 
 .brewStyle {
   margin-top: 10%;
   margin-bottom: 5%;
-}
+  text-align: left;
+  }
+
+html, body {
+  height: 100%
+  }
+
+body {
+  display: flex;
+  flex-direction: column;
+  }
 
 /***** Mobile Navigation-M *****/
 .wrapper {
   width: 85%;
   margin: 0 auto;
-}
+  flex: 1 1 auto;
+  }
 
 .navRule,
 .footerLine {
@@ -97,30 +106,34 @@ h6 {
   height: 1px;
   background: #333;
   background-image: linear-gradient(to right, #ccc, #333, #ccc);
-}
+  }
 
 .hamburgerButton {
   width: 50px;
   height: 50px;
-}
+  }
 
 .nav-logo {
   width: auto;
-  height: 63px;
+  height: 75px;
   border-radius: 7px;
   margin-right: auto;
-  margin-top: 5%;
-}
+  margin-top: 2%;
+  }
 
 .topNav {
   display: flex;
   flex-direction: row;
-  justify-content: flex-end;
+  justify-content: flex-start;
   overflow: hidden;
   position: relative;
   margin-top: 5%;
   align-items: center;
-}
+  }
+
+.brandName {
+  display: none;
+  }
 
 #navLinks,
 #navLinks a {
@@ -134,11 +147,11 @@ h6 {
   text-decoration: none;
   color: #000;
   z-index: 1;
-}
+  }
 
 #navLinks {
   display: none;
-}
+  }
 
 #navLinks a:hover {
   background-color: #08343c;
@@ -148,23 +161,95 @@ h6 {
   -moz-transition: background-color 0.6s ease-out, color 0.6s ease-out;
   -o-transition: background-color 0.6s ease-out, color 0.6s ease-out;
   transition: background-color 0.6s ease-out, color 0.6s ease-out;
-}
+  }
 
-/*** homepage ***/
-.index-main {
+/*** homepage, (index-brew ->brew page mobile), 
+(main-> products page)(extract-> page) ***/
+  .index-main, .index-brew, 
+  .main,  .article-extract {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
+  flex: 1 1 auto;
+  }
 
-.home-image {
+.home-image, .con-image, .ex-image {
   flex: 1 1 auto;
   border-radius: 10px 10px 10px 10px;
   opacity: 0.9;
   object-fit: cover;
   width: 100%;
-  margin-top: 7%;
-}
+  margin-top: 5%;
+  }
+
+.craftSelection {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 10%; 
+  margin-top: 5%;
+  } 
+
+#flavorA, #flavorB,
+#flavorC {
+  width: 90px;
+  padding: 3%;
+  cursor: pointer;
+  }
+
+.flavorModalA,
+.flavorModalB,
+.flavorModalC {
+  position: absolute;
+  cursor: pointer;
+  bottom: 10;
+  width: 280px;
+  height: 400px;
+  display: flex;
+  }
+
+.flavorModal--hidden,
+.flavorModalA--hidden,
+.flavorModalB--hidden, 
+.flavorModalC--hidden {
+  display: none;
+  }
+
+.modalContents {
+  background-color: #fff;
+  border: 1px solid #08343c;
+  display: flex;
+  flex-direction: row;
+  margin-left: -10%;
+  margin-top: 20%;
+  margin-bottom: 20%;
+  padding: 10px;
+  }
+
+.thorsDes {
+  width: 60px;
+  margin-left: -40%;
+  margin-top: 9%;
+  }
+
+.daneDes {
+  width: 65px;
+  height: auto;
+  margin-left: -40%;
+  margin-top: 9%;
+  }
+
+.enemiesDes {
+  width: 80px;
+  margin-left: -50%;
+  margin-top: 9%;
+  }
+
+#closeA, #closeB,
+#closeC  {
+  padding: 5px;
+  cursor: pointer;
+  }
 
 /***** CONTACT SECTION-M ******/
 .form {
@@ -175,7 +260,7 @@ h6 {
   width: 320px;
   border-radius: 10px;
   padding: 10px 20px;
-}
+  }
 
 .ABV-Input,
 .contactInput[type="text"],
@@ -191,7 +276,8 @@ select {
   border: 1px solid #000;
   text-transform: uppercase;
   background-color: #08343c2e;
-}
+  }
+
 .ABV-Input:focus,
 .contactInput[type="text"]:focus,
 .contactInput[type="email"]:focus,
@@ -200,17 +286,17 @@ select:focus {
   outline: 0;
   background-color: #fff;
   border-color: #3c0808;
-}
+  }
 
 textarea {
   min-height: 130px;
   margin-bottom: 5%;
-}
+  }
 
 legend {
   margin-bottom: 0px;
   font-weight: lighter;
-}
+  }
 
 .number {
   background-color: #3c0808;
@@ -224,10 +310,11 @@ legend {
   font-size: 0.8rem;
   margin-right: 10px;
   margin-top: 10%;
-}
+  }
 
-/***** ToolTip styles-M *****/
-.toolTip {
+/***** ToolTip styles-ABV *****/
+.toolTip,
+.toolTipabv {
   flex: 1 1 auto;
   border-radius: 20px;
   display: none;
@@ -235,15 +322,16 @@ legend {
   text-align: center;
   background: #08343c;
   color: #fff;
-  padding: 7px;
+  padding: 4px;
   position: absolute;
-  width: 160px;
-  margin-top: -19px;
-  margin-left: 135px;
+  width: 140px;
+  margin-top: 80px;
+  margin-left: 130px;
   text-transform: uppercase;
-}
+  }
 
-.toolTip:after {
+.toolTip:after,
+.toolTipabv:after {
   border: solid transparent;
   content: " ";
   pointer-events: none;
@@ -254,21 +342,27 @@ legend {
   width: 0;
   height: 0;
   right: 5%;
-  top: -40%;
+  top: -52%;
   margin-top: -8px;
-}
+  }
 
+/***** ToolTip- contact*****/
+.toolTip {
+  padding: 6px;
+  width: 160px;
+  margin-top: -19px;
+  margin-left: 135px;
+  }
+
+.toolTip:after {
+  top: -40%;
+  }
 /**** Form End ****/
 
 /* cocktail & Brews page */
-/* Style the buttons that are used to open and close the accordion panel */
-.typo,
-.typo-s {
-  max-width: 80%;
-}
-.typo-s {
-  margin-bottom: 5%;
-}
+.typo {
+  max-width: 85%;
+  }
 
 .typo-cen {
   display: flex;
@@ -276,17 +370,21 @@ legend {
   align-items: center;
   margin-bottom: 10%;
   margin-top: 10%;
-}
+  } 
 
+/* Accordian Tools panels */
 .menu {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
+  }
 
+.accordionB,
+.accordionBLink,
 .accordion,
 .accordionLink {
-  font-family: "HackneyPersonalUseOnly", "Bebas Neue", "Impact", "sans-serif";
+  font-family: "HackneyPersonalUseOnly", 
+      "Bebas Neue", "Impact", "sans-serif";
   background-color: #08343c;
   border-radius: 5px;
   color: #fff;
@@ -302,45 +400,55 @@ legend {
   border: 1px solid #000;
   outline: none;
   margin-bottom: 1%;
-}
+  }
 
+.accordionB:after,
 .accordion:after {
   content: "\02795"; /* Unicode character for (+) */
   font-size: 15px;
   color: #fff;
   float: right;
-}
+  }
 
 .active:after {
   content: "\2796"; /* Unicode character for (-) */
-}
+  }
 
 .active,
-.accordion:hover {
+.accordion:hover,
+.accordionB:hover {
   background-color: #3c0808;
   transition: 0.4s;
-}
+  }
 
 .panel {
   padding: 0 20px;
   max-width: 310px;
-
   background-color: white;
   display: none;
   overflow: hidden;
-}
+  }
+
+/* Accordian Recipe panels */
+.accordionB,
+.accordionBLink {
+  background-color:black;
+  box-shadow: none;
+  margin-top: -6px;
+  width: 100%;
+  height: 40px;
+  }
 
 /* abv calc */
-
 #ABV {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-}
+  }
 
 .ABV-Input {
   max-width: 35%;
-}
+  }
 
 #calc-ABV-btn {
   display: block;
@@ -352,23 +460,16 @@ legend {
   max-width: 50px;
   margin-top: 10%;
   font-size: 0.7rem;
-}
+  }
 
-#randomDrink {
+#randomDrink, 
+.btn_typo {
   display: flex;
   flex-direction: column;
-  margin-top: 15%;
   align-items: center;
-}
+  }
 
-#randomDiv {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: left;
-}
-
-#randomDiv img,
+#randomImg img,
 .brewImg {
   display: flex;
   flex: 1 1 auto;
@@ -376,36 +477,88 @@ legend {
   height: auto;
   border-radius: 10px 10px 10px 10px;
   object-fit: cover;
-  margin-top: 15%;
-}
+  }
 
-br img {
-  margin-bottom: 25px;
-}
+.imgBrew {
+  width: 90%;
+  object-fit: cover;
+  }
 
-li {
-  margin-top: 10px;
+.brewImg {
+  border-radius: 10px 10px 0 0; 
+  margin-top: 5%;
+  }
+
+#glossaryDiv li {
+  margin-top: 20px;
   text-align: left;
-}
+  max-width: 80vw;
+  }
 
 /* extract Process Page */
 .centerList {
   margin-bottom: 5%;
-}
+  }
 
 .equip {
   list-style-type: circle;
   margin-left: 15%;
   margin-bottom: 15%;
-}
+  }
 
-/*** product-grid ***/
+.ex-wrap {
+  display: flex;
+  flex-direction: column;
+  }
 
+.box {
+  object-fit: cover;
+  width: 85%;
+  }
+
+.ImageToList {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  } 
+
+/* click to view list items */
+#ex-image {
+  padding: 3%;
+  cursor: pointer;
+  }
+
+.box {
+  max-width: 50%;
+  }
+
+.centerList {
+  position: absolute;
+  cursor: pointer;
+  margin-top: 3%;
+  }
+
+.centerList--hidden {
+  display: none;
+  }
+
+.contents {
+  background-color: #fff;
+  border: 1px solid #08343c;
+  }
+
+#close {
+  padding: 5px;
+  cursor: pointer;
+  }
+
+/*** product-page ***/
 .randomBtn,
 #btnPro,
 #btnProRem {
   display: inline-block;
-  font-family: "HackneyPersonalUseOnly", "Bebas Neue", "Impact", "sans-serif";
+  font-family: "HackneyPersonalUseOnly",
+       "Bebas Neue", "Impact", "sans-serif";
   text-transform: uppercase;
   font-size: 1.2rem;
   letter-spacing: 2px;
@@ -419,33 +572,34 @@ li {
   border-width: 1px 1px 2px;
   cursor: pointer;
   text-align: center;
-}
+  }
+
 #btnPro {
   margin-right: 20px;
-}
+  }
 
 #btnProRem {
   background-color: #3c0808;
-}
+  }
 
 .btnDiv {
   display: flex;
   flex-direction: row;
   max-width: 280px;
-}
+  }
 
 .randomBtn {
   align-self: center;
   width: 222px;
   letter-spacing: 4px;
-}
+  }
 
 #btnPro:active,
 #btnProRem:active,
 .randomBtn:active,
 .btn:active {
   background-color: black;
-}
+  }
 
 .shopDiv {
   display: flex;
@@ -453,185 +607,501 @@ li {
   justify-content: space-between;
   margin-top: 10%;
   margin-bottom: 15%;
-}
+  }
 
 .h1-shop {
   color: #3c0808;
-}
+  }
 
 #cart {
   padding: 5px;
   cursor: pointer;
   margin-left: 15%;
   margin-top: -5px;
-}
+  }
 
 .productImg {
   margin: 5px;
   object-fit: cover;
-  max-width: 100%;
   width: 220px;
   height: auto;
   border-radius: 25px;
   border: 1px solid black;
-}
+  }
 
 .produ {
   display: flex;
   flex-direction: column;
   text-align: center;
   align-items: center;
-  max-width: 280px;
-}
+  margin-bottom: 30%;
+  }
+
+.description {
+  padding-left: 10%;
+  padding-right: 10%;
+  }
 
 .price {
   margin-bottom: 5%;
-}
+  }
 
-/* #lightbox {
-    position: fixed;
-    z-index: 1000;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #fff;
-    display: none;
-    }
-    
+/* lightbox */
+#lightbox {
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #1717176d;
+  display: none;
+  }
+
 #lightbox.active {
-    display: flex;
-    align-items: center;
-    }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  }
 
 #lightbox img {
-    max-width: 100%;  
-    max-height: 100%;
-    padding: 5px;
-    background-color: #fff;
-    border-radius: 25px;
-    transform: scale(.90);
-   
-    }    */
+  max-width: 100%;  
+  max-height: 100%;
+  padding: 5px;
+  background-color: #171717;
+  border-radius: 15px;
+  transform: scale(.90);
+  }    
+
+.bigFoot {
+  flex-shrink: 0;
+  }
 
 .social-links {
   display: flex;
   flex-direction: row;
   flex: 1 1 auto;
   justify-content: center;
-}
+  }
 
 .icons {
   padding: 8px;
-}
+  }
 
 .icons:hover {
   transform: scale(1.2);
   max-width: 70px;
-}
+  }
 
 .footerline {
   width: 85%;
-}
+  }
 
 .copyright {
   display: flex;
   justify-content: center;
   padding-bottom: 5%;
-}
+  }
 
 /*-------------------------------------------------------------
-                  SMALL iPADS
+      SMALL iPADS
 -------------------------------------------------------------*/
 /****** Small Screen Media Queries: Targets VP sizes 540px & wider. *******/
 @media (min-width: 540px) {
-  /* index page */
-  p {
-    max-width: 500px;
+/* index page */
+
+.p1, .p2 {
+  max-width: 80vw;
   }
 
-  /* brew page */
-  .acc-p {
-    max-width: 300px;
+.flavor {
+  width: 115px;
+  }
+/* extract page  */
+.ex-p {
+  max-width: 70vw;
+  }
+/* brew page */
+.acc-p {
+  max-width: 300px;
   }
 
-  .brewStyle {
-    text-align: left;
+.accordion {
+  width: 300px;
   }
 
-  /* products page */
-
-  .shopDiv {
-    margin-bottom: 10%;
+.imgBrew {
+  width: 95%;
   }
 
-  .main {
-    margin-top: 10%;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
+.brewStyle {
+  text-align: left;
   }
 
-  .produ {
-    width: 300px;
-    margin-bottom: 30%;
-    padding-left: 15%;
-    padding-right: 15%;
+.productImg {
+  width: 300px;
+  }
+
+.produ {
+  width: 340px;
+  } 
+
+.description {
+  padding-left: 5%;
+  padding-right: 5%;
   }
 }
 
 /*-------------------------------------------------------------
-                 i-PAD
+      i-PAD
 -------------------------------------------------------------*/
 /****** Large-ish Screen Media Queries: Targets VP sizes 1024px & wider. *******/
 @media (min-width: 768px) {
-  /* index page */
-  p {
-    max-width: 700px;
+/* index page */
+.nav-logo {
+  display: none;
   }
 
-  /* brew page */
-  .typo-cen {
-    flex-direction: row;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    justify-content: space-between;
+.craftSelection {
+  align-self: flex-end;
+  margin-top: -8%;
+  margin-right: 60%;
   }
 
-  .brewImg {
-    width: 80%;
+.flavorModalA,
+.flavorModalB,
+.flavorModalC {
+  width: 300px;
+  height: 450px;
   }
+
+.modalContents {
+  margin-left: -10%;
+  margin-top: 30%;
+  margin-bottom: 13%;
+  padding: 10px;
+  }
+
+.thorsDes, .daneDes,
+.enemiesDes {
+  width: 60px;
+  margin-left: -35%;
+  margin-right: 3%;
+  }
+
+.enemiesDes {
+  margin-left: -45%;
+  }
+
+.brandName {
+  display: flex;
+  width: auto;
+  height: 95px;
+  border-radius: 7px;
+  margin-right: auto;
+  margin-top: 2%;
+  }
+
+.p1 {
+  width: 42vw;
+  margin-right: 20px;
+  padding-bottom: 10%;
+  } 
+
+.p2 {
+  width: 42vw;
+  margin-right: 20px;
+  }
+
+.article-index {
+  display: flex;
+  flex-direction: row;
+  }  
+
+/* products page */
+.main {
+  margin-top: 10%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  } 
+
+.produ {
+  max-width: 300px;
+  margin-left: 1.7vw;
+  margin-right: 1.7vw;
+  } 
+
+.description {
+  flex-direction: column;
+  }
+
+.productImg {
+  width: 220px;
+  }
+
+/* contact page */
+.conSection {
+  display: flex;
+  flex-direction: row;
+  }
+
+.con-image  {
+  width: 30vw;
+  max-width: 40vw;
+  height: 30vh;
+  }
+
+.con-text  {
+  margin-top: 3%;
+  max-width: 50vw;
+  margin-left: 10%;
+  }
+
+.con-text p {
+  font-size: 1.1rem;
+  }
+
+.contentForm {
+  margin-top: 10%;
+  margin-bottom: 5%;
+  }
+
+.form {
+  width: 500px;
+  }
+
+.toolTip {
+  margin-left: 315px;
+  margin-top: -35px;
+  }
+
+/* cocktail page */
+#randomImg {
+  width: 70%;
+  }
+
+/* extract page   */
+.centerList {
+  margin-top: 10%;
+  } 
 }
-
-/*-------------------------------------------------------------
-            LAPTOP 
--------------------------------------------------------------*/
 /****** Large-ish Screen Media Queries: Targets VP sizes 1200px & wider. *******/
 @media (min-width: 1024px) {
-  /* brew page */
-  .brewImg {
-    max-width: 60%;
-    margin-right: 20%;
+#flavorA, #flavorB, 
+#flavorC {
+  width: 110px;
   }
 
-  .index-brew {
-    margin-top: 10%;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
+.flavorModalA,
+.flavorModalB,
+.flavorModalC {
+  width: 600px;
+  height: 610px;
+  margin-left: 5%;
+  margin-top: -5%;
   }
 
-  .recipes {
-    width: 350px;
-    margin-bottom: 15%;
-    padding-left: 5%;
-    padding-right: 5%;
+/* brew page */
+.typo-cen {
+  align-items: flex-start;
+  margin-top: 0;
   }
+
+.index-brew {
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  } 
+
+.imgBrew {
+  width: 40%;
+  }
+
+.accordionB,
+.accordionBLink {
+  flex-direction: row;
+  align-items: flex-start; 
+  width: 100%;
+  }  
+
+.index-brew {
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  } 
+
+.brewImg {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  }  
+/* extract page  */
+.centerList {
+  margin-top: 17%;
+  }
+
+.box {
+  display: flex;
+  width: 75%;
+  align-content: center;
+  }
+
+/* cocktail page */
+#randomDrink {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 5%;
+  justify-content: space-between ;
+  flex-wrap: wrap;
+  align-items:initial;
+  }
+
+#randomImg {
+  margin-left: 10%;
+  margin-right: 10%;
+  width: 35%;
+  }
+
+#randomImg img {
+  margin-top: 10%;
+  }
+
+#randomDiv h2 {
+  margin-left: -35%;
+  margin-top: -10vh;
+  }
+
+#randomDiv li, 
+#randomDiv p {
+  margin-left: 10%;
+  width: 400px;
+  }
+
+#randomDiv p {
+  margin-top: 5%;
+  }
+
+.btn_typo {
+  margin-top: 3%;
+  }
+
+/* product page */
+.productImg {
+  width: 260px;
+  }
+
+.produ {
+  margin-left: 6vw;
+  margin-right: 6vw;
+  } 
 }
 
 /*-------------------------------------------------------------
-           DESKTOP BEGIN-5
+Large-ish IPAD 1211
 -------------------------------------------------------------*/
-/****** Large-ish Screen Media Queries: Targets VP sizes 1400px & wider. *******/
-/* @media (min-width: 1400px)  */
+/****** Large-ish Screen Media Queries: Targets VP sizes 1200px & wider. *******/
+@media (min-width: 1200px) {
+.topNav {
+  display: inline-flex;
+  margin-top: 3%;
+  position: relative;
+  }
+
+.brandName {
+  width: auto;
+  height: 100px;
+  margin-right: 20vw;
+  }
+
+nav {
+  display: flex;
+  margin-top: 2%;
+  justify-content: flex-end;
+  }
+
+#navLinks a {
+  display: flex;
+  font-size: 3.3vh;
+  margin-top: 10%;
+  }
+
+.hamburgerButton {
+  display: none;
+  }
+
+#navLinks {
+  display: inline-flex;
+  flex-direction: row;
+  position: relative;
+  margin-right: 8%;
+  }    
+
+/*  products page */
+.shopDiv {
+  margin-bottom: 0;
+  margin-top: 5%;
+  }
+
+.h1-shop {
+  margin-left: auto;
+  margin-right: 55vw;
+  }
+
+#cart {
+  margin-right: 10vw;
+  }
+
+.produ {
+  margin-left: 3vw;
+  margin-right: 3vw;
+  } 
+
+.description {
+  padding-left: 10%;
+  padding-right: 10%;
+  }
+
+/* cocktail page */ 
+#randomDiv h2 {
+  margin-top: -13vh;
+  }
+/* extract page */
+
+.ex-p {
+  max-width: 40vw;
+  } 
+}
+
+/*-------------------------------------------------------------
+Larger VP sizes 1400px
+-------------------------------------------------------------*/
+/****** Larger Screen Media Queries: Targets VP sizes 1400px & wider. *******/
+@media (min-width: 1400px) {
+#randomDiv h2 {
+  margin-top: -20vh;
+  } 
+
+.craftSelection {
+  margin-top: 5px;
+  }
+
+.modalContents {
+  margin-left: -15%;
+  }
+
+/* Brew page */
+.imgBrew {
+  width: 30%;
+  }
+
+.accordionB,
+.accordionBLink {
+  width: 90%;
+  }  
+
+.brewImg {
+  width: 90%;
+  height: 400px;
+  }  
+}

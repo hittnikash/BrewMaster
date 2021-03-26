@@ -34,12 +34,13 @@ document.addEventListener("DOMContentLoaded", () => {
     };
   }
   /* Event Listeners */
-
   firstNameInput.addEventListener("input", createListener(isValidName));
   lastNameInput.addEventListener("input", createListener(isValidName));
   emailInput.addEventListener("input", createListener(isValidEmail));
   form.addEventListener("submit", postData);
 
+
+//  check status 
   function checkStatus(response) {
     if (response.ok) {
       return Promise.resolve(response);

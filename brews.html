@@ -20,7 +20,8 @@
         <header class="container" role="banner">
             <nav role="navigation">
                 <div class="topNav">
-                    <img class="nav-logo" src="icons/w2.png" alt="njor logo">
+                    <img class="nav-logo" src="icons/njorLogo.png" alt="njor logo">
+                    <img class="brandName" src="icons/njorLogoWname.png" alt="njor brand name">
                     <button onclick="toggle()" class="hamburgerButton" aria-label="hamburger navigation menu"
                         style="background: url(icons/blackHamburger.svg)"></button>
                 </div>
@@ -36,74 +37,79 @@
         </header>
         <hr class="navRule">
         <div class="typo-cen">
-            <img class="typo-s" src="icons/crafttype.png" alt="brewers guide to crafting beer recipes">
+            <img class="typo" src="icons/crafttype.png" alt="brewers guide to crafting beer recipes"><br>
             <!--Accordion Menu Options-->
             <div class="menu">
-                <button class="accordion">Brewing Methods</button>
+                <button class="accordion">Brew Methods/ Tools & Calc</button>
                 <div class="panel">
                     <p class="acc-p">There are many ways to make beer at home. One way is called extract brewing. This
                         method is simple
                         and does not require much investment. Another method is called All Grain brewing.
                         This process is more complex, requires more investment and it gives the brewer much more control
-                        of
                         over ther final product.</p>
 
                     <a href="extractProcess.html"><button class="accordion">Extract Brewing Process</button></a>
                     <div class="panel">
                     </div>
 
-                    <button class="accordion">All Grain Brewing Process</button>
-                    <div class="panel">
-                        <p class="acc-p">Check back later for more information!</p>
+                    <div class="inlineAcc">
+                        <button class="accordion">All Grain Brewing Process</button>
+                        <div class="panel">
+                            <p class="acc-p">Check back later for more information!</p>
+                        </div>
                     </div>
-                </div>
-                <button class="accordion">Tools & Calculators</button>
-                <div class="panel">
-                    <h3>ABV Calculator</h3>
-                    <form>
-                        <fieldset id="ABV">
-                            <input required type="text" class="ABV-Input" id="startingGravity" name="starting_gravity"
-                                placeholder="SG:"></input>
-                            <span class="toolTip">Can only contain numbers 0-9</span>
+                    <button class="accordion">Tools & Calculators</button>
+                    <div class="panel">
+                        <h3>ABV Calculator</h3>
+                        <form>
+                            <fieldset id="ABV">
+                                <input required type="text" class="ABV-Input" id="startingGravity"
+                                    name="starting_gravity" placeholder="SG:"></input>
+                                <span class="toolTipabv">Can only contain numbers 0-9</span>
 
-                            <input required type="text" class="ABV-Input" id="finalGravity" name="final_gravity"
-                                placeholder="FG:"></input>
-                            <span class="toolTip">Can only contain numbers 0-9</span>
-                            <button type="button" id="calc-ABV-btn">Get ABV</button>
-                        </fieldset>
-                        <p id="ABV_Result"></p>
-                    </form>
-                    <a href="glossary.html">
-                        <h3>Glossary</h3><br>
-                    </a>
+                                <input required type="text" class="ABV-Input" id="finalGravity" name="final_gravity"
+                                    placeholder="FG:"></input>
+                                <span class="toolTipabv">Can only contain numbers 0-9</span>
+                                <button type="button" id="calc-ABV-btn">Get ABV</button>
+                            </fieldset>
+                            <p id="ABV_Result"></p>
+                        </form>
+                        <hr>
+                        <a href="glossary.html">
+                            <h3>Glossary: List of Definitions</h3><br>
+                        </a>
+                        <hr>
+                    </div>
                 </div>
             </div>
             <main class="index-brew">
-
             </main>
 
-
         </div>
-        <footer class="bigFoot" role="contentinfo">
-            <hr class="footerLine">
-            <!-- Social Media Icons -->
-            <ul class="social-links">
-                <li class="icons"><a href="https://www.facebook.com/KBBarrel/"><img src="icons/faceNovel.png"
-                            width="40px" height="40px" alt="facebook" /></a></li>
-                <li class="icons"><a href="https://www.youtube.com/watch?v=caJzx6XWoOw"><img src="icons/youtubes.png"
-                            width="40px" height="40px" alt="Link to youtube" /></a></li>
-                <li class="icons"><a href="https://twitter.com/lexbrewingco?lang=en"><img src="icons/tweeter.png"
-                            width="40px" height="40px" alt="Link to twitter" /></a></li>
-                <li class="icons"><a href="https://www.instagram.com/lexingtonbrewingco/?hl=en"><img
-                            src="icons/insta.png" width="40px" height="40px" alt="Link to instagram" /></a></li>
-            </ul>
-            <span class="copyright">&copy; Brew Master 2021</span>
-        </footer>
-        <!-- JS LINKS -->
-        <script src="js/hamburger.js"></script>
-        <script src="js/beers.js"></script>
-        <script src="js/accordian.js"></script>
-        <script src="js/ABV_calc.js"></script>
+    </div>
+    <footer class="bigFoot" role="contentinfo">
+        <hr class="footerLine">
+        <!-- Social Media Icons -->
+        <ul class="social-links">
+            <li class="icons"><a href="https://www.facebook.com/LexingtonBrewingCo"><img src="icons/face-novel.png"
+                        width="40px" height="40px" alt="facebook" /></a></li>
+            <li class="icons"><a href="https://www.youtube.com/watch?v=caJzx6XWoOw"><img src="icons/youtubes.png"
+                        width="40px" height="40px" alt="Link to youtube" /></a></li>
+            <li class="icons"><a href="https://twitter.com/EinstokBeer"><img src="icons/tweeter.png" width="40px"
+                        height="40px" alt="Link to twitter" /></a></li>
+            <li class="icons"><a href="https://www.instagram.com/lexingtonbrewingco/?hl=en"><img src="icons/insta.png"
+                        width="40px" height="40px" alt="Link to instagram" /></a></li>
+            <li class="icons"><a
+                    href="https://www.brewersassociation.org/independent-craft-brewer-seal/?gclid=Cj0KCQjwutaCBhDfARIsAJHWnHuCL6llOAHyJspnHhyL33e3H34HruoCan0U73F2itrGSGqdw6Wsw4IaArHFEALw_wcB"><img
+                        src="icons/linkedIn.png" width="40px" height="40px" alt="Link to instagram" /></a></li>
+        </ul>
+        <span class="copyright">&copy; Brew Master 2021</span>
+    </footer>
+    <!-- JS LINKS -->
+    <script src="js/hamburger.js"></script>
+    <script src="js/beers.js"></script>
+    <script src="js/accordian.js"></script>
+    <script src="js/ABV_calc.js"></script>
 </body>
 
 </html>

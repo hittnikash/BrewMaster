@@ -20,7 +20,8 @@
         <header class="container" role="banner">
             <nav role="navigation">
                 <div class="topNav">
-                    <img class="nav-logo" src="icons/w2.png" alt="njor logo">
+                    <img class="nav-logo" src="icons/njorLogo.png" alt="njor logo">
+                    <img class="brandName" src="icons/njorLogoWname.png" alt="njor brand name">
                     <button onclick="toggle()" class="hamburgerButton" aria-label="hamburger navigation menu"
                         style="background: url(icons/blackHamburger.svg)"></button>
                 </div>
@@ -34,28 +35,58 @@
             </nav>
         </header>
         <hr class="navRule">
-
-
-
         <main class="index-main">
-            <img class="typo-s" src="icons/brewMasterTypography.png" alt="brewmasters guide to homebrewing & crafting cocktails">
-            <!-- <h1>– Njor BrewMaster –</h1> -->
-            <div><img class="home-image" src="images/processImg/homePage.jpg" alt="bourbon barrels"
-                    title="njor brewery" /></div>
-            <p> Njör is a company that takes pride in creating masterful products.
+            <div><img class="home-image" src="images/processImg/homePage.jpg" alt="bourbon barrels" title="njor brewery" />
+            </div>
+                <article class= "article-index">  
+            <p class= "p1"> Njör is a company that takes pride in creating masterful products.
                 Every detail from the milling of grains to the unique and thoughtful recipes–
                 each step in the brewing process is carried out by people who take pride
                 in their work and genuinely enjoy crafting a uniquely tasty brew.</p>
-            <p>Njör started out as a basement brewery, just a bunch of friends that would
+            <p class= "p2">Njör started out as a basement brewery, just a bunch of friends that would
                 get together and make beer. That’s, why we have compiled recipes and
-                useful tools to aid you in your home brewing adventures. Cheers! </p>
-        </main>
+                useful tools to aid you in your home brewing adventures.<br><br>
+                Try one of our flavors, see the line up below of our hand-crafted recipes.
+                Click on a flavor to read the tasting notes. Cheers!</p>                             
+            </article>  
+            <section class="craftSelection">
+                 <img onclick="modalToggleA()" id="flavorA" src="images/glassware/thor.jpg" alt="njor-beer" title="click to read about tasting notes"/>
+                <div class="flavorModalA flavorModalA--hidden">
+                    <div class="modalContents"> 
+                      <img class="flavorSm" src="images/glassware/thor.jpg" alt="njor-beer" title="njor brewery"/>
+                       <h2>Thor’s Hammer</h2><p class= "thorsDes">is a crisp pilsner that is light and easy to drink. Hints of coriander and orange peel.</p>
+                       <div id= "close"><button onclick="modalToggleA()">x</button></div>
+                    </div> 
+                  </div>
+                 
+                
+               <img onclick="modalToggleB()" id="flavorB" src="images/glassware/blood.jpg" alt="njor-beer" title="click to read about tasting notes"/>
+                <div class="flavorModalB flavorModalB--hidden">
+                    <div class="modalContents">
+                      <img class="flavorSm" src="images/glassware/blood.jpg" alt="njor-beer" title="njor brewery"/>
+                      <h2>Blood of my Enemies</h2><p class= enemiesDes>is an amber ale aged in decanted bourbon barrels with hints of caramel.</p>
+                    <div id= "closeB"><button onclick="modalToggleB()">x</button></div>
+                    </div> 
+                  </div>
+
+             <img onclick="modalToggleC()" id="flavorC" src="images/glassware/dane.jpg" alt="njor-beer" title="click to read about tasting notes">
+                <div class="flavorModalC flavorModalC--hidden">
+                    <div class="modalContents">
+                      <img class="flavorSm" src="images/glassware/dane.jpg" alt="njor-beer" title="njor brewery"/>
+                      <h2>The Great Dane</h2><br><p class= "daneDes">This coffee porter is a creamy, decadent after-dinner beer made with real coffee beans.</p>
+                      <div id= "closeC"><button onclick="modalToggleC()">x</button></div>
+
+                    </div> 
+                  </div>
+                  
+        </section>
+        </main> 
     </div>
     <footer class="bigFoot" role="contentinfo">
         <hr class="footerLine">
         <!-- Social Media Icons -->
         <ul class="social-links">
-            <li class="icons"><a href="https://www.facebook.com/LexingtonBrewingCo"><img src="icons/faceNovel.png"
+            <li class="icons"><a href="https://www.facebook.com/LexingtonBrewingCo"><img src="icons/face-novel.png"
                         width="40px" height="40px" alt="facebook" /></a></li>
             <li class="icons"><a href="https://www.youtube.com/watch?v=caJzx6XWoOw"><img src="icons/youtubes.png"
                         width="40px" height="40px" alt="Link to youtube" /></a></li>
@@ -63,13 +94,15 @@
                         height="40px" alt="Link to twitter" /></a></li>
             <li class="icons"><a href="https://www.instagram.com/lexingtonbrewingco/?hl=en"><img src="icons/insta.png"
                         width="40px" height="40px" alt="Link to instagram" /></a></li>
+            <li class="icons"><a href="https://www.brewersassociation.org/independent-craft-brewer-seal/?gclid=Cj0KCQjwutaCBhDfARIsAJHWnHuCL6llOAHyJspnHhyL33e3H34HruoCan0U73F2itrGSGqdw6Wsw4IaArHFEALw_wcB"><img src="icons/linkedIn.png"
+                width="40px" height="40px" alt="Link to instagram" /></a></li>
         </ul>
         <span class="copyright">&copy; Brew Master 2021</span>
     </footer>
 
     <!-- JS LINKS -->
     <script src="js/hamburger.js"></script>
-    <!-- <script src= ""></script>-->
+    <script src="js/flavorModal.js"></script> 
 </body>
 
 </html>
