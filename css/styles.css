@@ -31,7 +31,7 @@ p {
   flex: 1 1 auto;
   width: 100%;
   padding: 3%;
-  max-width: 305px;
+  /* max-width: 305px; */
   }
 
 h1,
@@ -164,9 +164,10 @@ body {
   }
 
 /*** homepage, (index-brew ->brew page mobile), 
-(main-> products page)(extract-> page) ***/
+(main-> products page)(extract-> page)(contact page) ***/
   .index-main, .index-brew, 
-  .main,  .article-extract {
+  .main, .article-extract, 
+  .index-extract, .index-con {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -529,7 +530,7 @@ legend {
   }
 
 .box {
-  max-width: 50%;
+  max-width: 100%;
   }
 
 .centerList {
@@ -885,6 +886,8 @@ legend {
 .centerList {
   margin-top: 10%;
   } 
+
+
 }
 /****** Large-ish Screen Media Queries: Targets VP sizes 1200px & wider. *******/
 @media (min-width: 1024px) {
@@ -1069,7 +1072,7 @@ nav {
 /* extract page */
 
 .ex-p {
-  max-width: 40vw;
+  max-width: 65vw;
   } 
 }
 
@@ -1104,4 +1107,11 @@ Larger VP sizes 1400px
   width: 90%;
   height: 400px;
   }  
+  /* index page */
+.home-image {
+  width: 1200px;
+}  
+.p1, .p2 {
+   width: 35vw;
+  }
 }

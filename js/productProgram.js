@@ -47,8 +47,6 @@ document.addEventListener("DOMContentLoaded", () => {
  lightbox.addEventListener('click', e => {
      if (e.target !== e.currentTarget) return;
      lightbox.classList.remove('active');
-    //  window.location.reload();
-     
    });
  }
 
@@ -67,16 +65,10 @@ document.addEventListener("DOMContentLoaded", () => {
       cartArr.pop(item);
       console.log(cartArr);  
       }
-      // function addTotal(i) {
-      // const stringToNums = cartArr.map(i => parseFloat(i));
-      // console.log(stringToNums);
-      //   const totalArr = stringToNums.reduce((sum, stringToNum) => sum += stringToNum, 0);
-      //   console.log(totalArr);
-      // }
     }
   );
 });
 
 
- 
+ //incomplete shopping cart :( 
 

@@ -6,4 +6,4 @@ function imgListToggle() {
     document.getElementById('ex-image').addEventListener('click', imgListToggle);
     //closes flavor modal
     document.querySelector('body').addEventListener('click', imgListToggle);
-    };
+    }
