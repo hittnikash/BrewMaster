@@ -1,4 +1,3 @@
-document.addEventListener("DOMContentLoaded", () => {
   const error = "Error. There was a problem retrieving data. Status Code: ";
   const div = document.querySelector("#randomDiv");
   const divImg = document.querySelector("#randomImg");
@@ -45,7 +44,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const img = createElement("img", "src", `${cocktail.drinks[0].strDrinkThumb}`);
     divImg.appendChild(img);
 
-    /// loop through the ingredients to get rid of listed 'null' & empty strings.
+    /// loop through the ingredients to get rid of listed 'nulls & empty strings.
     for (let i = 1; i < 16; i++) {
       if (
         cocktail.drinks[0][`strIngredient${i}`] === null ||
@@ -66,4 +65,3 @@ document.addEventListener("DOMContentLoaded", () => {
     } // measurements
     appendElements("p", "innerHTML", `${cocktail.drinks[0].strInstructions}`);
   } //instructions
-});

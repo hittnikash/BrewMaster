@@ -318,7 +318,6 @@ for (let i = 0; i < brews.length; i++) {
 }
 document.querySelector("main").insertAdjacentHTML("beforeEnd", html);
 
-
 const recipe = document.getElementsByClassName("accordionB");
 var i;
 

@@ -373,6 +373,11 @@ legend {
   margin-top: 10%;
   } 
 
+.randomContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 /* Accordian Tools panels */
 .menu {
   display: flex;
@@ -879,15 +884,28 @@ legend {
 
 /* cocktail page */
 #randomImg {
-  width: 70%;
+  width: 45vw;
   }
 
-/* extract page   */
+#randomDiv h2 {
+  margin-top: 5%;
+  margin-bottom: 5%;
+}  
+
+#randomDiv li {
+  margin-left: 20vw;
+}
+
+#randomDiv p {
+  margin-left: 5%;
+  width: 60vw;
+}
+
+
+  /* extract page   */
 .centerList {
   margin-top: 10%;
   } 
-
-
 }
 /****** Large-ish Screen Media Queries: Targets VP sizes 1200px & wider. *******/
 @media (min-width: 1024px) {
@@ -951,44 +969,35 @@ legend {
   }
 
 /* cocktail page */
-#randomDrink {
-  display: flex;
+.randomContent {
   flex-direction: row;
-  margin-bottom: 5%;
-  justify-content: space-between ;
-  flex-wrap: wrap;
-  align-items:initial;
+  justify-content: space-between;
+}
+
+.btn_typo {
+  margin-top: 3%;
+  align-self: flex-start;
   }
 
 #randomImg {
-  margin-left: 10%;
-  margin-right: 10%;
-  width: 35%;
-  }
-
-#randomImg img {
   margin-top: 10%;
+  width: 35vw;
   }
-
-#randomDiv h2 {
-  margin-left: -35%;
-  margin-top: -10vh;
-  }
-
+  
 #randomDiv li, 
 #randomDiv p {
-  margin-left: 10%;
-  width: 400px;
+  margin-left: 25%;
+  width: 35vw;
   }
 
 #randomDiv p {
   margin-top: 5%;
-  }
+  }  
 
-.btn_typo {
-  margin-top: 3%;
-  }
-
+#randomDiv h2 {
+  margin-bottom: 5%;
+}  
+  
 /* product page */
 .productImg {
   width: 260px;
@@ -1066,9 +1075,9 @@ nav {
   }
 
 /* cocktail page */ 
-#randomDiv h2 {
-  margin-top: -13vh;
-  }
+/* #randomDiv h2 {
+  margin-top: -7vh;
+  } */
 /* extract page */
 
 .ex-p {
@@ -1081,9 +1090,9 @@ Larger VP sizes 1400px
 -------------------------------------------------------------*/
 /****** Larger Screen Media Queries: Targets VP sizes 1400px & wider. *******/
 @media (min-width: 1400px) {
-#randomDiv h2 {
-  margin-top: -20vh;
-  } 
+/* #randomDiv h2 {
+  margin-top: -10vh;
+  }  */
 
 .craftSelection {
   margin-top: 5px;
