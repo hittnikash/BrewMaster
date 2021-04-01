@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
  lightbox.id = 'lightbox';
  document.body.appendChild(lightbox);
  
- /// To click on an image ///
+ /// To click on an image of a product ///
  const images = document.querySelectorAll('img');
  
  images.forEach(image => {
@@ -42,16 +42,14 @@ document.addEventListener("DOMContentLoaded", () => {
      });
  });
  
- /// To click off an image and hide the lightbox ///
+ /// To click off an product image and hide the lightbox ///
  lightbox.addEventListener('click', e => {
      if (e.target !== e.currentTarget) return;
      lightbox.classList.remove('active');
    });
  
 
-
-
-//  Add & Remove to cart
+//  Shopping Cart
   content.addEventListener("click", (e) => {
     e.preventDefault();
     const button = e.target;
@@ -59,36 +57,48 @@ document.addEventListener("DOMContentLoaded", () => {
     const item = e.target.value;
     const resultsDiv = document.getElementById('cartTotals');
     
-    //Adds item to cart
+//Adds item to cart
     if (action === "add" && cartArr.find((i) => i === item) == null) {
       cartArr.push(item);
-      console.log(cartArr);
-    //Removes item from cart
+   
+  //Removes item from cart
     } else if (action === "remove" && cartArr.find(i => i !== item)) {
-      cartArr.pop(item);
-      console.log(cartArr);  
+        cartArr.pop(item);
     }
+
   //calculate total cart  
   function totals() {
     //strings to numbers
     const prices = cartArr.map(item => parseFloat(item));
-    console.log(prices);
     //adds cart total
     const total = prices.reduce((sum, item) => sum += item, 0);
-    console.log(total);
     //only 2 decimal places 
     const stringTotal = total.toFixed(2);
-    const results = resultsDiv.innerHTML = "<h6>Total: $ <h6>"  +  stringTotal + "<h6> </h6>";
-    console.log(stringTotal);    
-  }
-    return totals();
-  });
-});
+       resultsDiv.innerHTML = "<h6>Total: $ <h6>"  +  stringTotal + "<h6> </h6>";
+    }
+      return totals();
+     });
+   });
 
 
 
 
+//  Create Modal 
+// const cartModal = document.createElement('div');
+// cartModal.id = 'cartModal';
+//  document.body.appendChild(cartModal);
 
+// // To open cart Div Modal
+// const cartIcon = document.getElementById('cart');
+// cartIcon.addEventListener('click', e => {
+// cartModal.classList.add('active');
+
+// // To hide cart Div Modal
+// cartIcon.addEventListener('click', e => {
+//   if (e.target !== e.currentTarget) return;
+//     cartIcon.classList.remove('active');
+//   });
+//  });
  //incomplete shopping cart :( 
 
 

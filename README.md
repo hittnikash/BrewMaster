@@ -17,7 +17,7 @@ A flexbox direction change from column (for mobile) to row, (for larger viewport
 
 <b>(JS Feature: Function that Calculates)</b> Under the tools & calculators tab on the Brews page, I have created an ABV calculator that used regular expressions to let the user know if they mistakenly enter in invalid character. A tool-tip pop ups that informs the user that only numbers 0-9 are valid. After the user inputs the starting gravity and the final gravity and then clicks the get abv button the calcABV function subtracts the two inputs and the multiplies the sum by 131, the tofixed method rounds the value to keep only two decimals. Then the final value is displayed to the user.
 
-<b>(JS Feature: JSON Read & Parse)</b>It was mentioned, (in 'class') that our AJAX calls would fulfill the AJAX requirement but not the read & parse an external JSON or CSV file into your app requirement, so I created a JSON file and stored it external on https://www.npoint.io/. Then I made a fetch request to retreive, read and parse that data into glossary.html.
+<b>(JS Feature: JSON Read & Parse)</b>It was mentioned, (in 'class') that our AJAX calls would fulfill the AJAX requirement but not the read & parse an external JSON or CSV file into your app requirement, so I created a JSON file and stored it externally on https://www.npoint.io/. Then I made a fetch request to retrieve, read and parse that data into glossary.html.
 
 <b>(JS Feature: Array of objects)</b> Beers.js & productObjects.js are both array of objects, which I created to organize and display data in my app.
 
@@ -25,5 +25,5 @@ A flexbox direction change from column (for mobile) to row, (for larger viewport
 
 
 <b>Project Testing</b>
-My project was tested on mac & windows, and runs on Google Chrome, Safari, FireFox.<br>
+My project was tested on mac & windows, and runs on Google Chrome, Safari, FireFox & Edge.<br>
 
