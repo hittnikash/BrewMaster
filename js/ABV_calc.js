@@ -7,7 +7,7 @@ document.getElementById("calc-ABV-btn").onclick = calcABV;
 // ABV Calculator
 function calcABV() {
   const x = (siGravity.value - fiGravity.value) * 131;
-  calcResult.innerHTML = "<h6>ABV:  <h6> " + x.toFixed(2) + "<h6>%</h6>";
+  calcResult.innerHTML = "<h6>ABV: <h6>"  +  x.toFixed(2) + "<h6> %</h6>";
   console.log(x.toFixed(2));
 }
 
