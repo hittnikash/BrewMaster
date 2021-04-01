@@ -1,5 +1,7 @@
 <b>README:</b>
-For the Code Louisville project I decided to make a web app showcasing one of my faviorite hobbies, homebrewing. I had a few struggles with this project. The first issue I had is the amount of time it took me to decide on a project. I had started on a few different projects which eventually came to a halt in favor of the brewing app. Open APIs played a part in this decision. Finding the right API for my app was half the struggle. 
+For the Code Louisville project I decided to make a web app showcasing one of my faviorite hobbies, homebrewing. I had a few struggles with this project. The first issue I had is the amount of time it took me to decide on a project. I had started on a few different projects which eventually came to a halt in favor of the brewing app. Open APIs played a huge part in this decision. Finding the right API for my app was half the battle. 
+
+<b>Attention Reviewers:<b> Thank you for taking the time to review my project. My api key for cocktailDB was sent with the project submission. 
 
 <b>Features:</b>
 My project was built with a mobile first approach, starting with a streamlined design for small devices and scaled up using  media queries to alter the layouts for bigger devices.
@@ -22,8 +24,6 @@ A flexbox direction change from column (for mobile) to row, (for larger viewport
 <b>(JS Feature: Regex)</b> I used regular expressions on my contact form to validate user input on my contact form, and in my ABV calculator.
 
 
-
-
 <b>Project Testing</b>
-My project was tested on mac and windows, and runs on Google Chrome, .............<br>
+My project was tested on mac & windows, and runs on Google Chrome, Safari, FireFox.<br>
 
