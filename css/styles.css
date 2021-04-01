@@ -678,6 +678,13 @@ legend {
   transform: scale(.90);
   }    
 
+#cartTotals {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: -6Vh;
+}
+    
+  
 .bigFoot {
   flex-shrink: 0;
   }

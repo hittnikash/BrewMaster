@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
     `;
     
     content.appendChild(addProduct);
-
+  }
  /// LIGHTBOX: To see a larger image of a product ///
  const lightbox = document.createElement('div');
  lightbox.id = 'lightbox';
@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", () => {
      if (e.target !== e.currentTarget) return;
      lightbox.classList.remove('active');
    });
- }
+ 
 
 
 
@@ -78,11 +78,10 @@ document.addEventListener("DOMContentLoaded", () => {
     console.log(total);
     //only 2 decimal places 
     const stringTotal = total.toFixed(2);
-    resultsDiv.innerHTML = "<h6>Cart Total: $ <h6>"  +  stringTotal + "<h6> </h6>";
+    const results = resultsDiv.innerHTML = "<h6>Total: $ <h6>"  +  stringTotal + "<h6> </h6>";
     console.log(stringTotal);    
   }
     return totals();
-  
   });
 });
 
@@ -90,8 +89,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-
-
-
  //incomplete shopping cart :( 
 
+
+ 
+ 
