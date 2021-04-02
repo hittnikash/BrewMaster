@@ -636,6 +636,11 @@ legend {
   border: 1px solid black;
   }
 
+.proImg {
+  border-radius: 8px; 
+  border: 1px solid black;
+}
+
 .produ {
   display: flex;
   flex-direction: column;
@@ -687,14 +692,14 @@ legend {
 
  /* cartModal */
 #cartModal {
- position: fixed;
- z-index: 1000;
- top: 0;
+ position: absolute;
+ z-index: 1;
+ 
  position: top;
  top: 28%;
  right: 5%;
  width: 50vw;
- height: 50vh;
+ height: 62vh;
  display: none;
  }
  
@@ -702,13 +707,17 @@ legend {
  display: flex;
  flex-direction: column;
  text-align: left;
- /* align-items: center; */
  background-color: #fff;
  border: 1px solid #08343c;
  padding: 10px;
 }
 
-  
+.update {
+font-size: 1.2rem;
+text-align: center;
+justify-content: center;
+}
+
 .bigFoot {
   flex-shrink: 0;
   }
@@ -785,6 +794,11 @@ legend {
 .description {
   padding-left: 5%;
   padding-right: 5%;
+  }
+ /* cartModal */
+ #cartModal {
+  width: 35vw;
+  height: 55vh;
   }
 }
 
@@ -876,6 +890,12 @@ legend {
 .productImg {
   width: 220px;
   }
+
+#cartModal {
+  width: 30vw;
+  height: 40vh;
+
+  }  
 
 /* contact page */
 .conSection {
@@ -1038,6 +1058,17 @@ legend {
   margin-left: 6vw;
   margin-right: 6vw;
   } 
+
+#cartModal {
+  width: 30vw;
+  height: 30vh;
+
+  }   
+
+#cartModal.active {
+  text-align: center;
+  align-items: center;
+}  
 }
 
 /*-------------------------------------------------------------
@@ -1105,11 +1136,11 @@ nav {
   padding-right: 10%;
   }
 
-/* cocktail page */ 
-/* #randomDiv h2 {
-  margin-top: -7vh;
-  } */
-/* extract page */
+#cartModal {
+  width: 20vw;
+  height: 40vh;
+  top: 40%;
+  }   
 
 .ex-p {
   max-width: 65vw;
@@ -1121,10 +1152,6 @@ Larger VP sizes 1400px
 -------------------------------------------------------------*/
 /****** Larger Screen Media Queries: Targets VP sizes 1400px & wider. *******/
 @media (min-width: 1400px) {
-/* #randomDiv h2 {
-  margin-top: -10vh;
-  }  */
-
 .craftSelection {
   margin-top: 5px;
   }
@@ -1154,4 +1181,8 @@ Larger VP sizes 1400px
 .p1, .p2 {
    width: 35vw;
   }
+
+#cartModal {
+  width: 15vw;
+  }     
 }

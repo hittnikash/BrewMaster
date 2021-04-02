@@ -64,6 +64,8 @@ display();
     cartModal.id = 'cartModal';
     document.body.appendChild(cartModal);
    
+if (cartModal)
+
 //Adds item to cart
     if (action === "add" && cartArr.find((i) => i === item) == null) {
       cartArr.push(item);
@@ -104,15 +106,22 @@ display();
 //displays individual added items to cart Modal  
   const added = cartArr.join("<br>");
   const addItems = cartArr.length;
+//displays qty below cart so user can see when an item is added or removed.
+cartIcon.innerHTML = `<h5>${addItems}</h5>`;
 
   cartModal.innerHTML = `
+  <h2>Items in Cart</h2><br>
   <h6>Qty in Cart: ${addItems}<h6> 
+  <h6>Item Price: </h6>
   <h6>${added}</h6><br> 
-  <h2>Total: $ ${stringTotal}<h2>  `;
-  }
-
+  <h2>Total: $ ${stringTotal}<h2>
+  <h5 class= "update">(Click cart icon to update cart totals)</h5>
+                              `;
+}
  return totals();
   
+
  });
 });
 
+//incomplete shopping cart :(
