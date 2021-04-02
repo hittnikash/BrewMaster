@@ -416,7 +416,8 @@ legend {
   float: right;
   }
 
-.active:after {
+.accordion.active:after,
+.accordionB.active:after {
   content: "\2796"; /* Unicode character for (-) */
   }
 
@@ -694,15 +695,14 @@ legend {
  right: 5%;
  width: 50vw;
  height: 50vh;
- background-color: #1717176d;
  display: none;
  }
  
 #cartModal.active {
  display: flex;
  flex-direction: column;
- justify-content: center;
- align-items: center;
+ text-align: left;
+ /* align-items: center; */
  background-color: #fff;
  border: 1px solid #08343c;
  padding: 10px;

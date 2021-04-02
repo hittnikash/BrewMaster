@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const content = document.querySelector("main");
 
   const cartArr = [];
-
+function display() {
   for (let i = 0; i < products.length; i++) {
     let product = products[i];
     const addProduct = document.createElement("div");
@@ -20,6 +20,8 @@ document.addEventListener("DOMContentLoaded", () => {
     
     content.appendChild(addProduct);
   }
+}
+display();
  /// LIGHTBOX: To see a larger image of a product ///
  const lightbox = document.createElement('div');
  lightbox.id = 'lightbox';
@@ -55,52 +57,62 @@ document.addEventListener("DOMContentLoaded", () => {
     const button = e.target;
     const action = button.textContent;
     const item = e.target.value;
-    const resultsDiv = document.getElementById('cartTotals');
-    
+
+    // Shopping Cart Div
+    const cartModal = document.createElement('div');
+    const cartIcon = document.getElementById('cart');
+    cartModal.id = 'cartModal';
+    document.body.appendChild(cartModal);
+   
 //Adds item to cart
     if (action === "add" && cartArr.find((i) => i === item) == null) {
       cartArr.push(item);
-   
-  //Removes item from cart
-    } else if (action === "remove" && cartArr.find(i => i !== item)) {
-        cartArr.pop(item);
-    }
+      console.log(cartArr);
 
-  //calculate total cart  
+//Removes item from cart
+  } else if (action === "remove" && cartArr.find(i => i === item)) {
+    const index = cartArr.indexOf(item);
+    if (index > -1) {
+      cartArr.splice(index, 1);
+    }
+    console.log(cartArr);
+}
+
+// To open cart Div 
+     cartIcon.addEventListener('click', e => {
+         cartModal.classList.add('active');
+
+// To hide cart Div 
+ cartIcon.addEventListener('click', e => {
+  if (e.target !== e.currentTarget) return;
+  cartModal.classList.remove('active');
+  });
+});
+  
+//calculate total cart  
   function totals() {
-    //strings to numbers
+
+//strings to numbers
     const prices = cartArr.map(item => parseFloat(item));
-    //adds cart total
+
+//adds cart total
     const total = prices.reduce((sum, item) => sum += item, 0);
-    //only 2 decimal places 
-    const stringTotal = total.toFixed(2);
-       resultsDiv.innerHTML = "<h6>Total: $ <h6>"  +  stringTotal + "<h6> </h6>";
-    }
-      return totals();
-     });
-   });
 
+//only 2 decimal places 
+  const stringTotal = total.toFixed(2);
 
+//displays individual added items to cart Modal  
+  const added = cartArr.join("<br>");
+  const addItems = cartArr.length;
 
+  cartModal.innerHTML = `
+  <h6>Qty in Cart: ${addItems}<h6> 
+  <h6>${added}</h6><br> 
+  <h2>Total: $ ${stringTotal}<h2>  `;
+  }
 
-//  Create Modal 
-// const cartModal = document.createElement('div');
-// cartModal.id = 'cartModal';
-//  document.body.appendChild(cartModal);
+ return totals();
+  
+ });
+});
 
-// // To open cart Div Modal
-// const cartIcon = document.getElementById('cart');
-// cartIcon.addEventListener('click', e => {
-// cartModal.classList.add('active');
-
-// // To hide cart Div Modal
-// cartIcon.addEventListener('click', e => {
-//   if (e.target !== e.currentTarget) return;
-//     cartIcon.classList.remove('active');
-//   });
-//  });
- //incomplete shopping cart :( 
-
-
- 
- 
