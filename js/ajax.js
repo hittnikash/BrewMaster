@@ -10,7 +10,7 @@
 
   ///fetch request/response/status
   function randomCocktail() {
-    fetch(`https://www.thecocktaildb.com/api/json/v2/${api}/random.php`).then(
+    fetch(`https://www.thecocktaildb.com/api/json/v1/1/random.php`).then(
       (response) => {
         response.json().then((data) => {
           displayRandomCocktail(data);
